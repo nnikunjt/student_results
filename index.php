@@ -10,8 +10,13 @@
     <title>Home</title>
   </head>
   <body>
-  	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-     <div class="nav text-center">
+  	
+    <div class="nav text-center">
+      <div class="form-group">
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">Yash Classes</a>
+    
      	<div class="form-group">
     <label for="mediumm">Select Medium</label>
     <select class="form-control" id="medium">
@@ -37,7 +42,7 @@
      <div class="form-group">
       <button type="button" class="btn btn-outline-primary " data-toggle="modal" data-target="#exampleModalCenter">
   Admin
-</button>
+</button></div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -72,7 +77,6 @@
         </div>
       </div>
     </div>
-
   </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -80,11 +84,7 @@
     </div>
   </div>
 </div>
-
-
-
-
-     </div>
+  </div>
 </nav>
 
   </body>
