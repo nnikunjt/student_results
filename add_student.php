@@ -10,6 +10,11 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="style.css" rel="stylesheet">
+	<style media="screen">
+		.container{
+			padding-top: 1rem;
+		}
+	</style>
 </head>
 <body>
 
@@ -29,15 +34,17 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-3">
-				<div class="card">
-					<div class="card-header">
-						Links
-					</div>
-					<div class="card-body">
-						<ul class="list-group">
-							<a href="add_student.php" class="list-group-item">Add student</a>
-							<a href="#" class="list-group-item">Add result</a>
-						</ul>
+				<div class="container">
+					<div class="card">
+						<div class="card-header">
+							Links
+						</div>
+						<div class="card-body">
+							<ul class="list-group">
+								<a href="add_student.php" class="list-group-item">Add student</a>
+								<a href="#" class="list-group-item">Add result</a>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
