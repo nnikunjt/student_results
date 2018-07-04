@@ -47,22 +47,18 @@
 							<h1 class="card-title">Add Result</h1>
 						    <div class="card">
 						        <div class="card-body">
-						        	<label for="medium" class="col-sm-2 col-form-label">Medium</label>
-						                    <div class="col-sm-4">
+						        	<div class="form-group row">
+						             <label for="medium" class="col-sm-2 col-form-label">Medium</label>
+						                 <div class="col-sm-4">
 						                        <select class="form-control" name="medium">
 						                            <option>Gujarati</option>
 						                            <option>English(GSEB)</option>
 						                            <option>English(CBSC)</option>
 						                        </select>
 						                    </div>
-						                </div>
-						            <div class="form-group col-sm-6">
-   							 <label for="search">Enter Roll No.</label>
-    						<input type="number" class=" main form-control" id="search-box" placeholder="roll no">
-  													</div>
-						                <div class="select form-group row" align="center">
-						                    <label for="std" class="col-sm-2 col-form-label">Std.</label>
-						                    <div class="col-sm-5 text-center">
+						                    <div class="select form-group row" align="center">
+						                    <label for="std" class="col-form-label">Std.</label>
+						                    <div class="text-center">
 						                        <select class="form-control" name="std">
 						                            <option>1</option>
 						                            <option>2</option>
@@ -77,12 +73,24 @@
 						                        </select>
 						                    </div>
 						                    </div>
+						                </div>
+						            <div class="form-group col-sm-6">
+   							 <label for="search">Enter Roll No.</label>
+    						<input type="number" class=" main form-control" placeholder="roll no">
+  								</div></div>
+						                
                   <div class="card-body">
-			        	<label for="subject" class="col-sm-2 col-form-label">subbject</label>	      <div class="form-group col-sm-6">
-   							 <label for="search">maths</label>
-    		<input type="text" class=" main form-control" id="search-box" placeholder="mark">
-    	</div>
+         			        	<h1 class="lead">Subjects</h1>	
+			     	      <div class="form-group row">
+   			<label for="search" class="col-3">Maths</label>
+    		<input type="text" class=" col-4 form-control" id="mark-box-1" placeholder="mark">
+    	           </div>
+    	           <div class="form-group row">
+   			<label for="search" class="col-3">Scinnrce</label>
+    		<input type="text" class=" col-4 form-control" id="mark-box-2" placeholder="mark">
+    	           </div>
             <center><input type="submit" name="submit" value="Add result " class="btn btn-outline-primary btn-lg"></center>
+        </div>
 						            </form>
 						        </div>
 						    </div>
