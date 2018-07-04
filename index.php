@@ -21,33 +21,10 @@
       <a href="index.php" class="navbar-brand">Yash classes</a>
     </div>
     
-     	<div class=" col-sm-2 medium-box form-group" align="right">
-    <label for="mediumm">Select Medium</label>
-    <select class="form-control" name="medium" id="medium">
-      
-  
-                   <option>Gujarati</option>
-                   <option>English(GSEB)</option>
-                   <option>English(CBSC)</option>
-                                    </select>
-      
-    </select>
- </div>
- <div class=" col-sm-3 form-group">
-    <label for="search">Enter Roll No.</label>
-    <input type="number" class=" main form-control" id="search-box" placeholder="roll no">
-  </div>
-     </div>
-     <div class="col-sm-3 form-group">
-     	<button type="button" class=" find-btn btn btn-outline-info "  data-target="#exampleModalCenter">
-  Find Result
-</button>
-
-     </div>
      
      
      <div class="form-group">
-      <button type="button" class="btn btn-outline-primary " data-toggle="modal" data-target="#exampleModalCenter" >
+      <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalCenter" >
   Admin
 </button></div>
 <!-- Modal -->
@@ -66,7 +43,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
     
-          <form class="" action="login.php" method="post">
+          <form class="" action="dashboard.php" method="post">
             <div class="form-group row">
                         <label for="username" class="form-label">User name</label>
                         
@@ -76,7 +53,7 @@
             <div class="form-group row">
                         <label for="password" class="form-label">Password</label>
                        
-                            <input type="text" class="form-control" name="password" value="" required>
+                            <input type="password" class="form-control" name="password" value="" required>
                        
                     </div>
             <input type="submit" class="btn btn-outline-primary btn-lg" name="login" value="Login">
@@ -94,5 +71,24 @@
   </div>
 </nav>
 
-  </body>
-</html
+
+
+
+<div class="card">
+ <div class=" col-sm-8 card-body" >
+<div class="form-group row">
+       <label class="col-sm-3 form-contro" for="mediumm">Select Medium</label>
+    <select class=" col-sm-2 form-control" name="medium" id="medium">
+
+                   <option>Gujarati</option>
+                   <option>English(GSEB)</option>
+                   <option>English(CBSC)</option>
+                </select>
+
+      <a href="result.php"  type="button" class="col-sm-2 btn btn-success form-contro">
+  Find Result</a>
+                   </div>
+               </div>
+            </div>
+      </body>
+   </html
