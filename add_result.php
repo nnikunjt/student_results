@@ -58,7 +58,7 @@
 									   <div class="form-group row">
 										   <label for="exam_date" class="col-sm-2 col-form-label">Test date</label>
 										   <div class="col-md-4">
-											   <input type="date" class="form-control" name="exam_date" value="" required autofocus>
+											   <input type="date" class="form-control" name="exam_date" value="" required>
 										   </div>
 										   <label for="medium" class="col-sm-2 col-form-label">Medium</label>
 										   <div class="col-sm-4">
