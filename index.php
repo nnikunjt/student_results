@@ -77,15 +77,15 @@
 <div class="card">
  <div class=" col-sm-8 card-body" >
 <div class="form-group row">
-       <label class="col-sm-3 form-contro" for="mediumm">Select Medium</label>
-    <select class=" col-sm-2 form-control" name="medium" id="medium">
+       <label class="text-center col-sm-3 form-contro" for="mediumm">Select Medium</label>
+    <select class="text-center col-sm-2 form-control" name="medium" id="medium">
 
                    <option>Gujarati</option>
                    <option>English(GSEB)</option>
                    <option>English(CBSC)</option>
                 </select>
-
-      <a href="result.php"  type="button" class="col-sm-2 btn btn-success form-contro">
+          <pre>    </pre>
+      <a href="result.php"  type="button" class="text-center col-sm-2 btn btn-success form-contro">
   Find Result</a>
                    </div>
                </div>
