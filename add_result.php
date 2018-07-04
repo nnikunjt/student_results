@@ -39,8 +39,8 @@
 						</div>
 						<div class="card-body">
 							<ul class="list-group">
-								<a href="" class="list-group-item disabled">Add student</a>
-								<a href="add_result.php" class="list-group-item">Add result</a>
+								<a href="add_student.php" class="list-group-item">Add student</a>
+								<a href="" class="list-group-item disabled">Add result</a>
 							</ul>
 						</div>
 					</div>
