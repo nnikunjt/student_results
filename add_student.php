@@ -36,7 +36,11 @@
 						</div>
 						<div class="card-body">
 							<ul class="list-group">
+<<<<<<< HEAD
+								<a href="" class="list-group-item disabled">Add student</a>
+=======
 								<a href="add_student.php " class="list-group-item disabled">Add student</a>
+>>>>>>> f11d45a8cc618635fb0b66371ddc74c93125ee39
 								<a href="add_result.php" class="list-group-item">Add result</a>
 							</ul>
 						</div>
