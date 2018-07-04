@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Complete Bootstrap 4 Website Layout</title>
+	<title>Add student</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -36,13 +36,7 @@
 						</div>
 						<div class="card-body">
 							<ul class="list-group">
-<<<<<<< HEAD
-
 								<a href="" class="list-group-item disabled">Add student</a>
-					
-=======
-								<a href="" class="list-group-item disabled">Add student</a>
->>>>>>> 39d90f3096f779a3c660329843439418364539fc
 								<a href="add_result.php" class="list-group-item">Add result</a>
 							</ul>
 						</div>
