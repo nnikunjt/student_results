@@ -20,7 +20,7 @@
 
 	<nav class="navbar navbar-dark navbar-expand-md bg-dark">
 		<div class="container-fluid">
-			<a href="index.php" class="navbar-brand">Yash classes</a>
+			<a href="index.php" class=" navbar-brand">Yash classes</a>
 		</div>
 		<ul class="navbar-nav">
 			<a href="index.php" type="button" class="btn btn-primary " >Log out</a>
