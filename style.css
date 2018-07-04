@@ -1,6 +1,12 @@
 
+.container{
+      padding-top: 1rem;
+    }
 
-.select{
-	margin-left: 3rem;
+
+.nav label{
+	color: #d3d3d3;
 
 }
+
+
