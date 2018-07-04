@@ -23,7 +23,7 @@
 			<a href="index.php" class="navbar-brand">Yash classes</a>
 		</div>
 		<ul class="navbar-nav">
-			<a href="index.php" type="button" class="btn btn-primary " >Log out</a> 
+			<a href="index.php" type="button" class="btn btn-primary " >Log out</a>
 		</ul>
 	</nav>
 	<div class="container-fluid">
@@ -36,11 +36,7 @@
 						</div>
 						<div class="card-body">
 							<ul class="list-group">
-<<<<<<< HEAD
 								<a href="" class="list-group-item disabled">Add student</a>
-=======
-								<a href="add_student.php " class="list-group-item disabled">Add student</a>
->>>>>>> f11d45a8cc618635fb0b66371ddc74c93125ee39
 								<a href="add_result.php" class="list-group-item">Add result</a>
 							</ul>
 						</div>
