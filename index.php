@@ -19,10 +19,13 @@
     
      	<div class="form-group">
     <label for="mediumm">Select Medium</label>
-    <select class="form-control" id="medium">
+    <select class="form-control" name="medium" id="medium">
       
-      <option>Gujarati</option>
-      <option>English </option>
+  
+                   <option>Gujarati</option>
+                   <option>English(GSEB)</option>
+                   <option>English(CBSC)</option>
+                                    </select>
       
     </select>
  </div>
