@@ -20,14 +20,14 @@
 
 	<nav class="navbar navbar-dark navbar-expand-md bg-dark">
 		<div class="container-fluid">
-			<a href="#" class="navbar-brand">Yash classes</a>
+			<a href="index.php" class="navbar-brand">Yash classes</a>
 		</div>
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link" href="add_student.php">Add_student</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Add_result</a>
+				<a class="nav-link" href="add_result.php">Add_result</a>
 			</li>
 		</ul>
 	</nav>

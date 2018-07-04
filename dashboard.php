@@ -14,7 +14,7 @@
     <body>
         <nav class="navbar navbar-dark navbar-expand-md bg-dark">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand">Yash classes</a>
+                <a href="index.php" class="navbar-brand">Yash classes</a>
             </div>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -35,7 +35,7 @@
                         <div class="card-body">
                             <ul class="list-group">
                                 <a href="add_student.php" class="list-group-item">Add student</a>
-                                <a href="#" class="list-group-item">Add result</a>
+                                <a href="add_result.php" class="list-group-item">Add result</a>
                             </ul>
                         </div>
                     </div>
