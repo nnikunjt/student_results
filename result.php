@@ -107,7 +107,9 @@
 <table class="table" id="t-main">
 
     <div class=" row form-group">
-   <pre>  </pre> Name:   <?php echo $s_name; ?></h1><pre>  </pre> Roll no.  <?php echo $roll_no; ?>  </div>
+   <pre>  </pre>
+   <p class="lead"> Name:   <?php echo $s_name; ?></h1> Roll no. <?php echo $roll_no; ?> </p> 
+       </div>
   <thead>
     <tr>
       <th scope="col">#</th>

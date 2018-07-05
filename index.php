@@ -71,9 +71,6 @@
   </div>
 </nav>
 
-
-
-
 <div class="card">
  <div class=" col-sm-8 card-body" >
 <div class="form-group row">
@@ -85,10 +82,16 @@
                    <option>English(CBSC)</option>
                 </select>
           <pre>    </pre>
-      <a href="result.php"  type="button" class="text-center col-sm-2 btn btn-success form-contro">
+
+            <label for="roll_no" class="col-sm-2 col-form-label">Roll no.</label>
+                       <div class="col-sm-2">
+                         <input type="text" name="roll_no" class="form-control" value="" required>
+                       </div>
+      <a href="result.php"  type="button" class="text-center  btn btn-success form-contro">
   Find Result</a>
                    </div>
                </div>
             </div>
+
       </body>
    </html
