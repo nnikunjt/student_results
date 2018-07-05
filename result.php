@@ -1,5 +1,5 @@
 <?php
- 
+
  $s_name="kishan";
   $roll_no=1218001;
 ?>
@@ -11,16 +11,16 @@
   <head>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link href="style.css" rel="stylesheet">
-  
-    
-  
+
+
+
     <title>Home</title>
   </head>
   <body>
@@ -28,9 +28,9 @@
     <div class=" container-fluid">
       <a href="index.php" class="navbar-brand">Yash classes</a>
     </div>
-    
-     
-     
+
+
+
      <div class="form-group">
       <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalCenter" >
   Admin
@@ -50,19 +50,19 @@
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-    
+
           <form class="" action="dashboard.php" method="post">
             <div class="form-group row">
                         <label for="username" class="form-label">User name</label>
-                        
+
                             <input type="text" class="form-control" name="username" value="" autofocus required>
-                        
+
                     </div>
             <div class="form-group row">
                         <label for="password" class="form-label">Password</label>
-                       
+
                             <input type="password" class="form-control" name="password" value="" required>
-                       
+
                     </div>
             <input type="submit" class="btn btn-outline-primary btn-lg" name="login" value="Login">
           </form>
@@ -108,7 +108,7 @@
 
     <div class=" row form-group">
    <pre>  </pre>
-   <p class="lead"> Name:   <?php echo $s_name; ?></h1> Roll no. <?php echo $roll_no; ?> </p> 
+   <p class="lead"> Name:   <?php echo $s_name; ?></h1> Roll no. <?php echo $roll_no; ?> </p>
        </div>
   <thead>
     <tr>
