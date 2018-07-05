@@ -17,13 +17,8 @@
                 <a href="index.php" class="navbar-brand">Yash classes</a>
             </div>
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="add_student.php">Add_student</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Add_result</a>
-                </li>
-            </ul>
+            <a href="index.php" type="button" class="btn btn-primary " >Log out</a>
+        </ul>
         </nav>
         <div class="container-fluid">
             <div class="row">
