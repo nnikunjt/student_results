@@ -1,3 +1,32 @@
+<?php
+	require_once("connection.php");
+
+
+	if(isset($_POST['submit'])){
+		$roll_no = $_POST['roll_no'];
+		$test_date =$_POST['exam_date'];
+		$medium = $_POST['medium'];
+		$std = $_POST['std'];
+		$math =$_POST['math'];
+		$science =$_POST['science'];
+		$sst = $_POST['ss'];
+
+		$insert_query = "INSERT INTO results(roll_no,test_date,std,medium ,math,science,social_science) VALUES('$roll_no','$test_date','$std','$medium','$math','$science','$sst')";
+
+		if($conn->query($insert_query) === TRUE){
+			echo "Your account has been created successfully !";
+		}
+		else
+		{
+			echo "This student is not registered ";
+		}
+
+	}
+ ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +83,7 @@
 						   <h1 class="card-title">Add Result</h1>
 						   <div class="card">
 							   <div class="card-body">
-								   <form class="" action="index.html" method="post">
+								   <form class="" action="" method="post">
 									   <div class="form-group row">
 										   <label for="exam_date" class="col-sm-2 col-form-label">Test date</label>
 										   <div class="col-md-4">
@@ -73,29 +102,25 @@
 										   <label for="std" class="col-sm-2 col-form-label">Std.</label>
 										  <div class="col-sm-4">
 											  <select class="form-control" name="std">
-												  <option>1</option>
-												  <option>2</option>
-												  <option>3</option>
-												  <option>4</option>
-												  <option>5</option>
-												  <option>6</option>
-												  <option>7</option>
-												  <option>8</option>
-												  <option>9</option>
+												  <option value="01">1</option>
+												  <option value="02">2</option>
+												  <option value="03">3</option>
+												  <option value="04">4</option>
+												  <option value="05">5</option>
+												  <option value="06">6</option>
+												  <option value="07">7</option>
+												  <option value="08">8</option>
+												  <option value="09">9</option>
 												  <option>10</option>
+												  <option>11</option>
+												  <option>12</option>
 											  </select>
 										  </div>
 									   </div>
 									   <div class="form-group row">
 										   <label for="roll_no" class="col-sm-2 col-form-label">Roll no.</label>
-										   <div class="col-sm-2">
+										   <div class="col-sm-4">
 											   <input type="text" name="roll_no" class="form-control" value="" required>
-										   </div>
-									   </div>
-									   <div class="form-group row">
-										   <label for="student_name" class="col-sm-2 col-form-label">Student name</label>
-										   <div class="col-sm-6">
-											   <input type="text" class="form-control" name="student_name" value="" required>
 										   </div>
 									   </div>
 									   <div class="form-group row">
