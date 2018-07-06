@@ -133,6 +133,8 @@
 						                            <option value="08">8</option>
 						                            <option value="09">9</option>
 						                            <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
 						                        </select>
 						                    </div>
 						                    <label for="medium" class="col-sm-2 col-form-label">Medium</label>
