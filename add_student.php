@@ -1,3 +1,58 @@
+<?php
+  	require_once("connection.php");
+
+
+	if(isset($_POST['submit'])){
+		$name = $_POST['student_name'];
+		$birthdate = $_POST['birthdate'];
+		$std = $_POST['std'];
+		$medium = $_POST['medium'];
+		$f_name = $_POST['father_name'];
+		$m_name = $_POST['mother_name'];
+		$father_no = $_POST['father_no'];
+		$mother_no = $_POST['mother_no'];
+		$address = $_POST['address'];
+
+        $med_no =null;
+        if ($medium == "Gujarati") {
+            $med_no =1;
+        }
+        elseif ($medium == "English(GSEB)") {
+            $med_no =2;
+        }
+        elseif ($medium == "Engilsh(CBSC)") {
+            $med_no =3;
+        }
+
+
+        $year = date('Y');
+        $year = substr($year,2,3);
+
+		$insert_query ="INSERT INTO students(student_name,std,medium,birthdate,father_name,father_no,mother_name,mother_no,address
+		) VALUES('$name','$std','$medium','$birthdate','$f_name','$father_no','$m_name','$mother_no','$address')";
+
+		if($conn->query($insert_query) === TRUE)
+            {
+                //echo "Your account has been created successfully !";
+                $id = $conn->insert_id;
+                $roll_no= $year.$std.$med_no.$id;
+                //echo $roll_no;
+                $update_query="UPDATE students SET roll_no=$roll_no WHERE id=$id";
+                if ($conn->query($update_query) === TRUE) {
+                    echo "Your account has been created successfully !";
+                }
+                else
+                {
+                    echo "Problem occurd during registration proccess.";
+                }
+
+            }
+
+	}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,46 +106,32 @@
 							<h1 class="card-title">Add student</h1>
 						    <div class="card">
 						        <div class="card-body">
-						            <form class="" action="index.html" method="post">
+						            <form class="" action="" method="post">
 						                <div class="form-group row">
 						                    <label for="student_name" class="col-sm-2 col-form-label">Student name</label>
 						                    <div class="col-sm-10">
 						                        <input type="text" class="form-control" name="student_name" value="" autofocus required>
 						                    </div>
 						                </div>
-						                <div class="form-group row">
-						                    <label for="father_name"  class="col-sm-2 col-form-label">Father name</label>
-						                    <div class="col-sm-4">
-						                        <input type="text" name="father_name" class="form-control" value="" required>
-						                    </div>
-						                    <label for="father_no"  class="col-sm-2 col-form-label">Phone no. </label>
-						                    <div class="col-sm-4">
-						                        <input type="text" name="father_no" class="form-control" value="" required>
-						                    </div>
-						                </div>
-						                <div class="form-group row">
-						                    <label for="mother_name"  class="col-sm-2 col-form-label">Mother name</label>
-						                    <div class="col-sm-4">
-						                        <input type="text" name="mother_name" class="form-control" value="" required>
-						                    </div>
-						                    <label for="mother_no"  class="col-sm-2 col-form-label">Phone no. </label>
-						                    <div class="col-sm-4">
-						                        <input type="text" name="mother_no" class="form-control" value="">
-						                    </div>
-						                </div>
+										<div class="form-group row">
+										   <label for="birthdate" class="col-sm-2 col-form-label">Birthdate</label>
+										   <div class="col-sm-4">
+											   <input type="date" class="form-control" name="birthdate" value="" required>
+										   </div>
+									   </div>
 						                <div class="form-group row">
 						                    <label for="std" class="col-sm-2 col-form-label">Std.</label>
 						                    <div class="col-sm-4">
 						                        <select class="form-control" name="std">
-						                            <option>1</option>
-						                            <option>2</option>
-						                            <option>3</option>
-						                            <option>4</option>
-						                            <option>5</option>
-						                            <option>6</option>
-						                            <option>7</option>
-						                            <option>8</option>
-						                            <option>9</option>
+						                            <option value="01">1</option>
+						                            <option value="02">2</option>
+						                            <option value="03">3</option>
+						                            <option value="04">4</option>
+						                            <option value="05">5</option>
+						                            <option value="06">6</option>
+						                            <option value="07">7</option>
+						                            <option value="08">8</option>
+						                            <option value="09">9</option>
 						                            <option>10</option>
 						                        </select>
 						                    </div>
@@ -101,6 +142,26 @@
 						                            <option>English(GSEB)</option>
 						                            <option>English(CBSC)</option>
 						                        </select>
+						                    </div>
+						                </div>
+										<div class="form-group row">
+						                    <label for="father_name"  class="col-sm-2 col-form-label">Father name</label>
+						                    <div class="col-sm-5">
+						                        <input type="text" name="father_name" class="form-control" value="" required>
+						                    </div>
+						                    <label for="father_no"  class="col-sm-2 col-form-label">Phone no. </label>
+						                    <div class="col-sm-3">
+						                        <input type="text" name="father_no" class="form-control" value="" required>
+						                    </div>
+						                </div>
+						                <div class="form-group row">
+						                    <label for="mother_name"  class="col-sm-2 col-form-label">Mother name</label>
+						                    <div class="col-sm-5">
+						                        <input type="text" name="mother_name" class="form-control" value="" required>
+						                    </div>
+						                    <label for="mother_no"  class="col-sm-2 col-form-label">Phone no. </label>
+						                    <div class="col-sm-3">
+						                        <input type="text" name="mother_no" class="form-control" value="">
 						                    </div>
 						                </div>
 						                <div class="form-group row">
