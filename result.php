@@ -1,7 +1,7 @@
 <?php
+ require_once ('connection.php');
+  
 
- $s_name="kishan";
-  $roll_no=1218001;
 ?>
 
 
@@ -83,10 +83,10 @@
 
 
 <div class="card">
- <div class=" col-sm-8 card-body" >
+ <div class=" col-sm-10 card-body" >
 <div class="form-group row">
-       <label class="text-center col-sm-3 form-contro" for="mediumm">Select Medium</label>
-    <select class="text-center col-sm-2 form-control" name="medium" id="medium">
+       <label class="text-center col-sm-3 " for="mediumm">Select Medium</label>
+    <select class="text-center col-sm-2 " name="medium" id="medium">
 
                    <option>Gujarati</option>
                    <option>English(GSEB)</option>
@@ -98,54 +98,97 @@
                        <div class="col-sm-2">
                          <input type="text" name="roll_no" class="form-control" value="" required>
                        </div>
-      <a href="result.php"  type="button" class="text-center  btn btn-success form-contro">
+      <a href="result.php"  type="button" class="text-center  btn btn-success">
   Find Result</a>
                    </div>
                </div>
             </div>
 
-<table class="table" id="t-main">
-
-    <div class=" row form-group">
-   <pre>  </pre>
-   <p class="lead"> Name:   <?php echo $s_name; ?></h1> Roll no. <?php echo $roll_no; ?> </p>
+<div class="col-md-9">
+        <div class="container">
+          <div class="row" align="center" >
+             <div class="col-md-1"></div>
+             <div class="col-md-10">
+               <div class="card">
+                 <div class="card-body">
+                   <form class="" action="index.html" method="post">
+                     <div class="form-group row">
+                       <label for="student_name" class="col-sm-2 col-form-label">Student name</label>
+                       <div class="col-sm-6">
+                         <input type="text" class="form-control" name="student_name" value="" required>
+                       </div>
+                     </div>
+                     <div class="form-group row">
+                       <label for="exam_date" class="col-sm-2 col-form-label">Test date</label>
+                       <div class="col-md-4">
+                         <input type="date" class="form-control" name="exam_date" value="">
+                       </div>
+                    
+                       <label for="roll_no" class="col-sm-2 col-form-label">Roll no.</label>
+                       <div class="col-sm-2">
+                         <input type="text" name="roll_no" class="form-control" value="" required>
+                       </div>                                            
+                     </div>
+                     
+                     <div class="form-group row">
+                       <label class="col-sm-3 col-form-label header">Subjects :</label>
+                       </div>
+                     <div class="form-group row">
+                       <label for="math" class="col-sm-2 col-form-label">Math</label>
+                       <div class="col-sm-2">
+                         <input type="text" name="mathtotal" class="form-control" value="">
+                       </div>
+                       <label for="math" class="col-sm-2 col-form-label">into</label>
+                       <div class="col-sm-2">                        
+                      <input type="text" name="mathobtain" class="form-control" value="">
+                       </div>
+                       <label for="math" class="col-sm-2 col-form-label">Prescent</label>
+                       <div class="col-sm-2">
+                         <input type="text" name="mathspercent" class="form-control" value="">
+                       </div>
+                     </div>
+                     <div class="form-group row">
+                       <label for="science" class="col-sm-2 col-form-label">science</label>
+                       <div class="col-sm-2">
+                         <input type="text" name="sciencetotal" class="form-control" value="">
+                       </div>
+                       <label for="science" class="col-sm-2 col-form-label">into</label>
+                       <div class="col-sm-2">
+                         <input type="text" name="scienceobtain" class="form-control" value="">
+                       </div>
+                        <label for="scinece" class="col-sm-2 col-form-label">Prescent</label>
+                       <div class="col-sm-2">
+                         <input type="text" name="scinecepercent" class="form-control" value="">
+                       </div>
+                     </div>
+                     <div class="form-group row">
+                       <label for="ss" class="col-sm-2 col-form-label">Social science</label>
+                       <div class="col-sm-2">
+                         <input type="text" name="sstotal" class="form-control" value="">
+                       </div>
+                        <label for="ss" class="col-sm-2 col-form-label">into</label>
+                       <div class="col-sm-2">
+                         <input type="text" name="ssobtain" class="form-control" value="">
+                       </div>
+                         <label for="ss" class="col-sm-2 col-form-label">Prescent</label>
+                       <div class="col-sm-2">
+                         <input type="text" name="sspercent" class="form-control" value="">
+                       </div>
+                     </div>    
+                     <div class="form-group row">
+                       <label for="ss" class="col-sm-4 col-form-label">Percentage :</label>
+                       <div class="col-sm-4">
+                         <input type="text" name="sstotal" class="form-control" value="">
+                       </div>
+                       
+                     </div>                  
+                   </form>
+                 </div>
+               </div>
+             </div>
+           </div>
+        </div>
        </div>
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Subjects</th>
-      <th scope="col">Total mark</th>
-      <th scope="col">Obtain mark</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>maths</td>
-      <td>100</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Science</td>
-      <td>100</td>
-      <td>95</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Scocial Science</td>
-      <td>100</td>
-      <td>93</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-
-
-
-
 
 
 

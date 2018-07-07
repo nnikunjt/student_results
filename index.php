@@ -1,3 +1,13 @@
+<?php 
+
+
+
+
+ ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -71,11 +81,12 @@
   </div>
 </nav>
 
+
 <div class="card">
- <div class=" col-sm-8 card-body" >
+ <div class=" col-sm-10 card-body" >
 <div class="form-group row">
-       <label class="text-center col-sm-3 form-contro" for="mediumm">Select Medium</label>
-    <select class="text-center col-sm-2 form-control" name="medium" id="medium">
+       <label class="text-center col-sm-3 " for="mediumm">Select Medium</label>
+    <select class="text-center col-sm-2 " name="medium" id="medium">
 
                    <option>Gujarati</option>
                    <option>English(GSEB)</option>
@@ -87,7 +98,7 @@
                        <div class="col-sm-2">
                          <input type="text" name="roll_no" class="form-control" value="" required>
                        </div>
-      <a href="result.php"  type="button" class="text-center  btn btn-success form-control">
+      <a href="result.php"  type="button" class="text-center  btn btn-success">
   Find Result</a>
                    </div>
                </div>
