@@ -1,58 +1,3 @@
-<<<<<<< HEAD
-<?php 
-
-
- require_once ('connection.php');
-
- 				if(isset($_POST['submit']))
-    {
-        $sname = $_POST['s_name'];
-        $smedium = $_POST['medium'];
-        $std = $_POST['std'];
-        $roll_no = $_POST['roll_no'];
-        $tdate = $_POST['exam_date'];
-        $mtotal = $_POST['mathtotal'];
-        $mobtain = $_POST['mathobtain'];
-        $stotal = $_POST['sciencetotal'];
-        $sobtain = $_POST['scienceobtain'];
-        $sstotal = $_POST['sstotal'];
-        $ssobtain = $_POST['ssobtain'];
-        		        	
-        		if ($mtotal=="") {
-       	       $mtotal=0;  
-       	       $mobtain=0;             	
-             }	    
-
-        	if ($stotal=="") {
-       	       $stotal=0;  
-       	       $sobtain=0;             	
-             }	    
-             if ($sstotal=="") {
-       	       $sstotal=0;  
-       	       $ssobtain=0;             	
-             }	
-            
-             $percent=  (( $mobtain+ $ssobtain+ $sobtain)*100)/( $mtotal+ $stotal+ $sstotal);         
-            $insert_query = "INSERT INTO 
-          student_mark(`name`, `t_date`, `roll_num`, `medium`, `std`, `math_t`, `math_o`, 
-                       `science_t`, `science_o`, `ss_t`, `ss_o`, `percent`)
-                        VALUES
-                        ('$sname','$tdate','$roll_no','$smedium','$std','$mtotal','$mobtain',
-                        '$stotal','$sobtain','$sstotal,'$ssobtain','$percent')";
-
-            
-            if($conn->query($insert_query) === TRUE)
-            {
-                echo "Your account has been created successfully !";
-            }
-            else
-            {
-                echo "Problem occurd during registration proccess.";
-            }
-  }
-
-   ?>
-=======
 <?php
 	require_once("connection.php");
 
@@ -65,8 +10,14 @@
 		$math =$_POST['math'];
 		$science =$_POST['science'];
 		$sst = $_POST['ss'];
+		$math_to = $_POST['math_to'];
+		$science_to = $_POST['science_to'];
+		$ss_to = $_POST['ss_to'];
 
-		$insert_query = "INSERT INTO results(roll_no,test_date,std,medium ,math,science,social_science) VALUES('$roll_no','$test_date','$std','$medium','$math','$science','$sst')";
+		$per = (($math+$science+$sst)*100)/($math_to+$science_to+$ss_to);
+
+
+		$insert_query = "INSERT INTO results(roll_no,test_date,std,medium ,math_obtain,sci_obtain,sst_obtain,math_total,sci_total,sst_total,percentage) VALUES('$roll_no','$test_date','$std','$medium','$math','$science','$sst','$math_to','$science_to','$ss_to','$per')";
 
 		if($conn->query($insert_query) === TRUE){
 			echo "Your account has been created successfully !";
@@ -79,7 +30,6 @@
 	}
  ?>
 
->>>>>>> 1c73777c8b451664482773228fd5a31e659756b8
 
 
 
@@ -139,11 +89,7 @@
 						   <h1 class="card-title">Add Result</h1>
 						   <div class="card">
 							   <div class="card-body">
-<<<<<<< HEAD
-								   <form class="" action="#" method="post">
-=======
 								   <form class="" action="" method="post">
->>>>>>> 1c73777c8b451664482773228fd5a31e659756b8
 									   <div class="form-group row">
 										   <label for="exam_date" class="col-sm-2 col-form-label">Test date</label>
 										   <div class="col-md-4">
@@ -184,47 +130,39 @@
 										   </div>
 									   </div>
 									   <div class="form-group row">
-<<<<<<< HEAD
-										   <label for="student_name" class="col-sm-2 col-form-label">Student name</label>
-										   <div class="col-sm-6">
-											   <input type="text" class="form-control" name="s_name" value="" required>
-										   </div>
-									   </div>
-									   <div class="form-group row">
-										   <label class="col-sm-3 col-form-label header display-4">Subjects :</label>
-										  
-=======
 										   <label class="col-sm-2 col-form-label header">Marks :</label>
->>>>>>> 1c73777c8b451664482773228fd5a31e659756b8
 									   </div>
 									   <div class="form-group row">
-										   <label for="math" class="col-sm-3 col-form-label">Math</label>
-										   <div class="col-sm-3">
-											   <input type="text" name="mathtotal" class="form-control" value="" placeholder="total mark">
+										   <label for="math" class="col-sm-2 col-form-label">Math</label>
+										   <div class="col-sm-2">
+											   <input type="text" name="math" class="form-control" value="">
 										   </div>
-										   <div class="col-sm-3">
-											   <input type="text" name="mathobtain" class="form-control" value=""  placeholder="obtain mark">
-										   </div>
-									   </div>
-									   <div class="form-group row">
-										   <label for="science" class="col-sm-3 col-form-label">science</label>
-										   <div class="col-sm-3">
-											   <input type="text" name="sciencetotal" class="form-control" value=""  placeholder="total mark">
-										   </div>
-										   <div class="col-sm-3">
-											   <input type="text" name="scienceobtain" class="form-control" value=""  placeholder="obtain mark">
+										   <label for="" class="col-sm-2 col-form-label">out of</label>
+										   <div class="col-sm-2">
+											   <input type="text" name="math_to" class="form-control" value="">
 										   </div>
 									   </div>
 									   <div class="form-group row">
-										   <label for="ss" class="col-sm-3 col-form-label">Social science</label>
-										   <div class="col-sm-3">
-											   <input type="text" name="sstotal" class="form-control" value=""  placeholder="total mark">
+										   <label for="science" class="col-sm-2 col-form-label">science</label>
+										   <div class="col-sm-2">
+											   <input type="text" name="science" class="form-control" value="">
 										   </div>
-										   <div class="col-sm-3">
-											   <input type="text" name="ssobtain" class="form-control" value="" placeholder="obtain mark">
+										   <label for="" class="col-sm-2 col-form-label">out of</label>
+										   <div class="col-sm-2">
+											   <input type="text" name="science_to" class="form-control" value="">
 										   </div>
 									   </div>
-									   <center><input type="submit" name="submit" value="Add Result" class="btn btn-outline-primary btn-lg"></center>
+									   <div class="form-group row">
+										   <label for="ss" class="col-sm-2 col-form-label">Social science</label>
+										   <div class="col-sm-2">
+											   <input type="text" name="ss" class="form-control" value="">
+										   </div>
+										   <label for="" class="col-sm-2 col-form-label">out of</label>
+										   <div class="col-sm-2">
+											   <input type="text" name="ss_to" class="form-control" value="">
+										   </div>
+									   </div>
+									   <center><input type="submit" name="submit" value="Submit" class="btn btn-outline-primary btn-lg"></center>
 								   </form>
 							   </div>
 						   </div>
