@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php 
 
 
@@ -79,7 +79,7 @@
 	}
  ?>
 
->>>>>>> 1c73777c8b451664482773228fd5a31e659756b8
+
 
 
 
@@ -139,11 +139,10 @@
 						   <h1 class="card-title">Add Result</h1>
 						   <div class="card">
 							   <div class="card-body">
-<<<<<<< HEAD
+
 								   <form class="" action="#" method="post">
-=======
+
 								   <form class="" action="" method="post">
->>>>>>> 1c73777c8b451664482773228fd5a31e659756b8
 									   <div class="form-group row">
 										   <label for="exam_date" class="col-sm-2 col-form-label">Test date</label>
 										   <div class="col-md-4">
