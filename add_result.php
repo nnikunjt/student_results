@@ -5,8 +5,6 @@
 	if(isset($_POST['submit'])){
 		$roll_no = $_POST['roll_no'];
 		$test_date =$_POST['exam_date'];
-		$medium = $_POST['medium'];
-		$std = $_POST['std'];
 		$math =$_POST['math'];
 		$science =$_POST['science'];
 		$sst = $_POST['ss'];
@@ -17,7 +15,7 @@
 		$per = (($math+$science+$sst)*100)/($math_to+$science_to+$ss_to);
 
 
-		$insert_query = "INSERT INTO results(roll_no,test_date,std,medium ,math_obtain,sci_obtain,sst_obtain,math_total,sci_total,sst_total,percentage) VALUES('$roll_no','$test_date','$std','$medium','$math','$science','$sst','$math_to','$science_to','$ss_to','$per')";
+		$insert_query = "INSERT INTO results(roll_no,test_date,math_obtain,sci_obtain,sst_obtain,math_total,sci_total,sst_total,percentage) VALUES('$roll_no','$test_date','$math','$science','$sst','$math_to','$science_to','$ss_to','$per')";
 
 		if($conn->query($insert_query) === TRUE){
 			echo "Your account has been created successfully !";
@@ -74,8 +72,10 @@
 						</div>
 						<div class="card-body">
 							<ul class="list-group">
+								<a href="dashboard.php" class="list-group-item">Dashboard</a>
 								<a href="add_student.php" class="list-group-item">Add student</a>
 								<a href="" class="list-group-item disabled">Add result</a>
+								<a href="add_user.php" class="list-group-item">Add user</a>
 							</ul>
 						</div>
 					</div>
@@ -91,42 +91,15 @@
 							   <div class="card-body">
 								   <form class="" action="" method="post">
 									   <div class="form-group row">
-										   <label for="exam_date" class="col-sm-2 col-form-label">Test date</label>
-										   <div class="col-md-4">
-											   <input type="date" class="form-control" name="exam_date" value="" required autofocus>
-										   </div>
-										   <label for="medium" class="col-sm-2 col-form-label">Medium</label>
-										   <div class="col-sm-4">
-											   <select class="form-control" name="medium">
-												   <option>Gujarati</option>
-												   <option>English(GSEB)</option>
-												   <option>English(CBSC)</option>
-											   </select>
-										   </div>
-									   </div>
-									   <div class="form-group row">
-										   <label for="std" class="col-sm-2 col-form-label">Std.</label>
-										  <div class="col-sm-4">
-											  <select class="form-control" name="std">
-												  <option value="01">1</option>
-												  <option value="02">2</option>
-												  <option value="03">3</option>
-												  <option value="04">4</option>
-												  <option value="05">5</option>
-												  <option value="06">6</option>
-												  <option value="07">7</option>
-												  <option value="08">8</option>
-												  <option value="09">9</option>
-												  <option>10</option>
-												  <option>11</option>
-												  <option>12</option>
-											  </select>
-										  </div>
-									   </div>
-									   <div class="form-group row">
 										   <label for="roll_no" class="col-sm-2 col-form-label">Roll no.</label>
 										   <div class="col-sm-4">
-											   <input type="text" name="roll_no" class="form-control" value="" required>
+											   <input type="text" name="roll_no" class="form-control" value="" required autofocus>
+										   </div>
+									   </div>
+									   <div class="form-group row">
+										   <label for="exam_date" class="col-sm-2 col-form-label">Test date</label>
+										   <div class="col-md-4">
+											   <input type="date" class="form-control" name="exam_date" value="" required>
 										   </div>
 									   </div>
 									   <div class="form-group row">

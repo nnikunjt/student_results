@@ -1,8 +1,30 @@
 <?php
- require_once ('connection.php');
-  
 
-?>
+    require_once('connection.php');
+
+
+    if(isset($_POST['login']))
+    {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $select_query = "SELECT `user_name`, `password` FROM `users` WHERE `user_name` = '$username' AND `password` = '$password'";
+        $select_run = mysqli_query($conn, $select_query);
+        $select_row = mysqli_fetch_array($select_run, MYSQLI_ASSOC);
+
+
+        $user = $select_row['user_name'];
+        $pass = $select_row['password'];
+
+
+        if($username == $user && $password == $pass)
+        {
+            header('location:dashboard.php');
+        }
+        echo "Invalid username or password.";
+    }
+
+ ?>
 
 
 
@@ -18,7 +40,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link href="style.css" rel="stylesheet">
+  <style media="screen">
 
+  </style>
 
 
     <title>Home</title>
@@ -51,7 +75,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
 
-          <form class="" action="dashboard.php" method="post">
+          <form class="" action="" method="post">
             <div class="form-group row">
                         <label for="username" class="form-label">User name</label>
 
@@ -81,117 +105,121 @@
 
 
 
-
-<div class="card">
- <div class=" col-sm-10 card-body" >
-<div class="form-group row">
-       <label class="text-center col-sm-3 " for="mediumm">Select Medium</label>
-    <select class="text-center col-sm-2 " name="medium" id="medium">
-
-                   <option>Gujarati</option>
-                   <option>English(GSEB)</option>
-                   <option>English(CBSC)</option>
-                </select>
-          <pre>    </pre>
-
-            <label for="roll_no" class="col-sm-2 col-form-label">Roll no.</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="roll_no" class="form-control" value="" required>
-                       </div>
-      <a href="result.php"  type="button" class="text-center  btn btn-success">
-  Find Result</a>
-                   </div>
-               </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <form class="" action="" method="post">
+                        <div class="form-group row">
+                            <label for="roll_no" class="col-sm-1 col-form-label">Roll no.</label>
+                            <div class="col-sm-2">
+                                <input type="text" name="roll_no" class="form-control" value="" required>
+                            </div>
+                            <div class="col-sm-1">
+                                <input type="submit" name="find" class="text-center btn btn-success" value="Find Result">
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-<div class="col-md-9">
-        <div class="container">
-          <div class="row" align="center" >
-             <div class="col-md-1"></div>
-             <div class="col-md-10">
-               <div class="card">
-                 <div class="card-body">
-                   <form class="" action="index.html" method="post">
-                     <div class="form-group row">
-                       <label for="student_name" class="col-sm-2 col-form-label">Student name</label>
-                       <div class="col-sm-6">
-                         <input type="text" class="form-control" name="student_name" value="" required>
-                       </div>
-                     </div>
-                     <div class="form-group row">
-                       <label for="exam_date" class="col-sm-2 col-form-label">Test date</label>
-                       <div class="col-md-4">
-                         <input type="date" class="form-control" name="exam_date" value="">
-                       </div>
-                    
-                       <label for="roll_no" class="col-sm-2 col-form-label">Roll no.</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="roll_no" class="form-control" value="" required>
-                       </div>                                            
-                     </div>
-                     
-                     <div class="form-group row">
-                       <label class="col-sm-3 col-form-label header">Subjects :</label>
-                       </div>
-                     <div class="form-group row">
-                       <label for="math" class="col-sm-2 col-form-label">Math</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="mathtotal" class="form-control" value="">
-                       </div>
-                       <label for="math" class="col-sm-2 col-form-label">into</label>
-                       <div class="col-sm-2">                        
-                      <input type="text" name="mathobtain" class="form-control" value="">
-                       </div>
-                       <label for="math" class="col-sm-2 col-form-label">Prescent</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="mathspercent" class="form-control" value="">
-                       </div>
-                     </div>
-                     <div class="form-group row">
-                       <label for="science" class="col-sm-2 col-form-label">science</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="sciencetotal" class="form-control" value="">
-                       </div>
-                       <label for="science" class="col-sm-2 col-form-label">into</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="scienceobtain" class="form-control" value="">
-                       </div>
-                        <label for="scinece" class="col-sm-2 col-form-label">Prescent</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="scinecepercent" class="form-control" value="">
-                       </div>
-                     </div>
-                     <div class="form-group row">
-                       <label for="ss" class="col-sm-2 col-form-label">Social science</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="sstotal" class="form-control" value="">
-                       </div>
-                        <label for="ss" class="col-sm-2 col-form-label">into</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="ssobtain" class="form-control" value="">
-                       </div>
-                         <label for="ss" class="col-sm-2 col-form-label">Prescent</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="sspercent" class="form-control" value="">
-                       </div>
-                     </div>    
-                     <div class="form-group row">
-                       <label for="ss" class="col-sm-4 col-form-label">Percentage :</label>
-                       <div class="col-sm-4">
-                         <input type="text" name="sstotal" class="form-control" value="">
-                       </div>
-                       
-                     </div>                  
-                   </form>
-                 </div>
-               </div>
-             </div>
-           </div>
         </div>
-       </div>
+    </div>
+</div>
+
+
+<?php
+
+    // showing results
+    if (isset($_POST['find'])) {
+        $roll_no = $_POST['roll_no'];
 
 
 
+        $select_query = "SELECT * FROM students INNER JOIN results ON students.roll_no = results.roll_no WHERE students.roll_no = $roll_no AND results.test_date = (SELECT MAX(test_date) FROM results WHERE roll_no = $roll_no)";
+        $select_run = mysqli_query($conn, $select_query);
+        $select_row = mysqli_fetch_array($select_run);
 
-      </body>
-   </html
+    echo "<div class='container'>
+            <div class='row'>
+                <div class='col-md-10'>
+                    <div class='card'>
+                        <div class='card-header'>
+                        Result
+                    </div>
+                    <div class='card-body'>
+                    <div class='row'>
+                        <label class='col-sm-2 col-form-label'>Name :</label>
+                        <div class='col-sm-4'>" ;
+                            echo $select_row['student_name'];
+                  echo "</div>
+                    </div>
+                    <div class='row'>
+                        <label class='col-sm-2 col-form-label'>Test Date :</label>
+                        <div class='col-sm-4'>" ;
+                            echo $select_row['test_date'];
+                   echo "</div>
+                    </div>
+                    <div class='row'>
+                        <label class='col-sm-2 col-form-label'>std. :</label>
+                        <div class='col-sm-4'>";
+                            echo $select_row['std'];
+                    echo "</div>
+                        <label class='col-sm-2 col-form-label'>Medium :</label>
+                        <div class='col-sm-4'>";
+                            echo $select_row['medium'];
+                    echo "</div>
+                    </div>
+                    <table class='table'>
+                        <thead class='thead-light'>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Total marks</th>
+                                <th>Obtain marks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>";
+                            if ($select_row['math_total'] != 0 && $select_row['math_obtain']) {
+                                echo "<td>Math</td>";
+                                echo "<td>".$select_row['math_total']."</td>";
+                                echo "<td>".$select_row['math_obtain']."</td>";
+                            }
+                            echo "</tr>
+                                    <tr>";
+                            if ($select_row['sci_total'] != 0 && $select_row['sci_obtain']) {
+                                echo "<td>Science</td>";
+                                echo "<td>".$select_row['sci_total']."</td>";
+                                echo "<td>".$select_row['sci_obtain']."</td>";
+                            }
+                            echo "</tr>
+                                    <tr>";
+                                    if ($select_row['sst_total'] != 0 && $select_row['sst_obtain']) {
+                                        echo "<td>Social Science</td>";
+                                        echo "<td>".$select_row['sst_total']."</td>";
+                                        echo "<td>".$select_row['sst_obtain']."</td>";
+                                    }
+                        echo "</tr>
+                            </tr>
+                        </tbody>
+                    </table>";
+                    echo "<div class='row'>
+                    <label class='col-sm-2 col-form-label'>Percentage :</label>
+                    <div class='col-sm-4'>";
+                        echo $select_row['percentage'];
+                    echo "</div>
+                        </div>";
+
+        echo "</div>
+            </div>
+        </div>
+    </div>
+</div>";
+
+
+}
+?>
+
+
+</body>
+</html>

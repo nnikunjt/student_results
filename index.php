@@ -1,10 +1,29 @@
-<?php 
+<?php
+
+    require_once('connection.php');
 
 
+    if(isset($_POST['login']))
+    {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $select_query = "SELECT `user_name`, `password` FROM `users` WHERE `user_name` = '$username' AND `password` = '$password'";
+        $select_run = mysqli_query($conn, $select_query);
+        $select_row = mysqli_fetch_array($select_run, MYSQLI_ASSOC);
 
 
+        $user = $select_row['user_name'];
+        $pass = $select_row['password'];
+
+
+        if($username == $user && $password == $pass)
+        {
+            header('location:dashboard.php');
+        }
+        echo "Invalid username or password.";
+    }
  ?>
-
 
 
 
@@ -53,7 +72,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
 
-          <form class="" action="dashboard.php" method="post">
+          <form class="" action="" method="post">
             <div class="form-group row">
                         <label for="username" class="form-label">User name</label>
 
@@ -78,31 +97,30 @@
     </div>
   </div>
 </div>
-  </div>
 </nav>
 
 
-<div class="card">
- <div class=" col-sm-10 card-body" >
-<div class="form-group row">
-       <label class="text-center col-sm-3 " for="mediumm">Select Medium</label>
-    <select class="text-center col-sm-2 " name="medium" id="medium">
-
-                   <option>Gujarati</option>
-                   <option>English(GSEB)</option>
-                   <option>English(CBSC)</option>
-                </select>
-          <pre>    </pre>
-
-            <label for="roll_no" class="col-sm-2 col-form-label">Roll no.</label>
-                       <div class="col-sm-2">
-                         <input type="text" name="roll_no" class="form-control" value="" required>
-                       </div>
-      <a href="result.php"  type="button" class="text-center  btn btn-success">
-  Find Result</a>
-                   </div>
-               </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <form class="" action="result.php" method="post">
+                        <div class="form-group row">
+                            <label for="roll_no" class="col-sm-1 col-form-label">Roll no.</label>
+                            <div class="col-sm-2">
+                                <input type="text" name="roll_no" class="form-control" value="" required>
+                            </div>
+                            <div class="col-sm-1">
+                                <input type="submit" name="find" class="text-center btn btn-success" value="Find Result">
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
+        </div>
+    </div>
+</div>
 
       </body>
    </html
