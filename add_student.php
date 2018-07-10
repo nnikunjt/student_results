@@ -175,8 +175,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
-<footer class="page-footer font-small unique-color-dark pt-4">
+	</div><br><br>
+
 
     <!-- Footer Elements -->
 
@@ -187,7 +187,7 @@
     </div>
     <!-- Copyright -->
 
-  </footer>
-	
+  
+
 </body>
 </html>

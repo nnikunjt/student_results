@@ -72,16 +72,6 @@
 			font-size: 20px;
 		}
 
-		.footer{
- 	background-color: #F5FFFA;
- 	color: #808080;
- 	padding-top: 2rem;
-
- }
- .footer a{
- 	margin-left: .5rem;
- 	margin-right: .5rem;
- }
 	</style>
 </head>
 <body>

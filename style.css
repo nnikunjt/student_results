@@ -25,12 +25,14 @@
 .footer{
  	background-color: #F5FFFA;
  	color: #808080;
- 	
- 	position: absolute;
-left: 0;
-bottom: 0;
+ 	position: fixed;
+   	margin-bottom: .3rem;
+   	flex: 0 0 auto;
+ 	bottom:0px;
 
-width: 100%;
+	height: 40px;
+	width: 100%;
+ 	padding-top: 2rem;
 
  }
  .footer a{
