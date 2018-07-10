@@ -11,19 +11,40 @@
 		$math_to = $_POST['math_to'];
 		$science_to = $_POST['science_to'];
 		$ss_to = $_POST['ss_to'];
+		$mess;
+      	
+          if ($math_to=="") {
+       	       $math_to=0;  
+       	       $math=0;             	
+             }	    
+
+        	if ($science_to=="") {
+       	       $science_to=0;  
+       	       $science=0;             	
+             }	    
+             if ($ss_to=="") {
+       	       $ss_to=0;  
+       	       $sst=0;             	
+             }	
+            
+
 
 		$per = (($math+$science+$sst)*100)/($math_to+$science_to+$ss_to);
+
 
 
 		$insert_query = "INSERT INTO results(roll_no,test_date,math_obtain,sci_obtain,sst_obtain,math_total,sci_total,sst_total,percentage) VALUES('$roll_no','$test_date','$math','$science','$sst','$math_to','$science_to','$ss_to','$per')";
 
 		if($conn->query($insert_query) === TRUE){
-			echo "Your account has been created successfully !";
+			$mess = "Your account has been created successfully !";	
+			
 		}
 		else
 		{
-			echo "This student is not registered ";
+			$mess= "This student is not registered ";
 		}
+
+		
 
 	}
  ?>
@@ -89,10 +110,10 @@
 						   <h1 class="card-title">Add Result</h1>
 						   <div class="card">
 							   <div class="card-body">
-								   <form class="" action="" method="post">
+								   <form class="" action="#" method="post">
 									   <div class="form-group row">
 										   <label for="roll_no" class="col-sm-2 col-form-label">Roll no.</label>
-										   <div class="col-sm-4">
+								   <div class="col-sm-4">
 											   <input type="text" name="roll_no" class="form-control" value="" required autofocus>
 										   </div>
 									   </div>
@@ -135,8 +156,9 @@
 											   <input type="text" name="ss_to" class="form-control" value="">
 										   </div>
 									   </div>
-									   <center><input type="submit" name="submit" value="Submit" class="btn btn-outline-primary btn-lg"></center>
-								   </form>
+									   <center><input type="submit" name="submit" value="Add result" class="btn btn-outline-primary btn-lg">
+									   </center>
+								</form>
 							   </div>
 						   </div>
 					   </div>
