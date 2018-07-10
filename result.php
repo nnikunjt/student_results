@@ -41,7 +41,9 @@
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link href="style.css" rel="stylesheet">
   <style media="screen">
-
+        .col-sm-4{
+            padding-top: .4rem;
+        }
   </style>
 
 
