@@ -24,6 +24,16 @@
 
 .footer{
  	background-color: #F5FFFA;
- 	color: #d5d5d4;
- 	padding-top: 2rem;
+ 	color: #808080;
+ 	
+ 	position: absolute;
+left: 0;
+bottom: 0;
+
+width: 100%;
+
+ }
+ .footer a{
+ 	margin-left: .5rem;
+ 	margin-right: .5rem;
  }
