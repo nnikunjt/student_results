@@ -110,7 +110,7 @@
 						   <h1 class="card-title">Add Result</h1>
 						   <div class="card">
 							   <div class="card-body">
-								   <form class="" action="#" method="post">
+								   <form class="" action="#" method="post" >
 									   <div class="form-group row">
 										   <label for="roll_no" class="col-sm-2 col-form-label">Roll no.</label>
 								   <div class="col-sm-4">

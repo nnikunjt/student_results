@@ -13,18 +13,7 @@
 		$mother_no = $_POST['mother_no'];
 		$address = $_POST['address'];
 
-        $med_no =null;
-        if ($medium == "Gujarati") {
-            $med_no =1;
-        }
-        elseif ($medium == "English(GSEB)") {
-            $med_no =2;
-        }
-        elseif ($medium == "Engilsh(CBSC)") {
-            $med_no =3;
-        }
-
-
+        
         $year = date('Y');
         $year = substr($year,2,3);
 
@@ -35,7 +24,10 @@
             {
                 //echo "Your account has been created successfully !";
                 $id = $conn->insert_id;
-                $roll_no= $year.$std.$med_no.$id;
+                if ($id<10) {
+                	$id = "0".$id;
+                	}
+                $roll_no= $year.$std.$id;
                 //echo $roll_no;
                 $update_query="UPDATE students SET roll_no=$roll_no WHERE id=$id";
                 if ($conn->query($update_query) === TRUE) {
