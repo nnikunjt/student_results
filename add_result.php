@@ -73,13 +73,14 @@
 		}
 
 		.footer{
- 	background-color: #dcdcdc;
+ 	background-color: #F5FFFA;
  	color: #808080;
  	padding-top: 2rem;
 
  }
  .footer a{
- 	margin-right: 1rem;
+ 	margin-left: .5rem;
+ 	margin-right: .5rem;
  }
 	</style>
 </head>
@@ -188,7 +189,7 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer  py-3" align="right">Created by
+    <div class="footer  py-3" align="right">Created by  
       <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
     </div>
