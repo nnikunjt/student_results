@@ -1,30 +1,3 @@
-<?php
-
-    require_once('database/connection.php');
-
-
-    if(isset($_POST['login']))
-    {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-        $select_query = "SELECT `user_name`, `password` FROM `users` WHERE `user_name` = '$username' AND `password` = '$password'";
-        $select_run = mysqli_query($conn, $select_query);
-        $select_row = mysqli_fetch_array($select_run, MYSQLI_ASSOC);
-
-
-        $user = $select_row['user_name'];
-        $pass = $select_row['password'];
-
-
-        if($username == $user && $password == $pass)
-        {
-            header('location:admin/dashboard.php');
-        }
-        echo "Invalid username or password.";
-    }
- ?>
-
 
 
 <!DOCTYPE html>
@@ -50,7 +23,7 @@
       <a href="index.php" class="navbar-brand">Yash classes</a>
     </div>
 
-    
+
 </nav>
 
 
@@ -81,9 +54,9 @@
     <!-- Footer Elements -->
 
 
-      <div class="footer  py-3" align="right">Created by  
+      <div class="footer  py-3" align="right">Created by
       <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
- 
+
     <div class="footer  py-3" align="right">Created by
       <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
