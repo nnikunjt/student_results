@@ -3,19 +3,9 @@
 
 
     if(isset($_POST['submit'])){
-        $user = $_POST['username'];
-        $pass = $_POST ['password'];
-
-        $insert_query = "INSERT INTO users(user_name,password) VALUES ('$user','$pass')";
-
-        if($conn->query($insert_query) === TRUE){
-			echo "Your account has been created successfully !";
-		}
-		else
-		{
-			echo "This student is not registered ";
-		}
-    }
+        
+			echo "This work  being done soon... ";
+	    }
 ?>
 
 
