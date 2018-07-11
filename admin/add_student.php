@@ -3,10 +3,7 @@
 
 
 	if(isset($_POST['submit'])){
-		$fname = $_POST['f_name'];
-        $mname = $_POST['m_name'];
-        $lname = $_POST['l_name'];
-        $name =$fname." ".$mname." ".$lname;
+		$name = $_POST['student_name'];
 		$birthdate = $_POST['birthdate'];
 		$std = $_POST['std'];
 		$medium = $_POST['medium'];
@@ -65,13 +62,6 @@
 			padding-top: 1rem;
 		}
 	</style>
-    <script>
-        function sync(){
-            var m_name = document.getElementById('m_name');
-            var father_name = document.getElementById('father_name');
-            father_name.value = m_name.value;
-        }
-    </script>
 </head>
 <body>
 
@@ -97,6 +87,8 @@
                                 <a href="add_student.php" class="list-group-item disabled">Add student</a>
                                 <a href="add_result.php" class="list-group-item">Add result</a>
                                 <a href="add_user.php" class="list-group-item">Add user</a>
+                                <a href="settings.php" class="list-group-item">Settings</a>
+
                             </ul>
                         </div>
 					</div>
@@ -113,14 +105,8 @@
 						            <form class="" action="" method="post">
 						                <div class="form-group row">
 						                    <label for="student_name" class="col-sm-2 col-form-label">Student name</label>
-						                    <div class="col-sm-3">
-						                        <input type="text" class="form-control" name="f_name" value="" placeholder="first name" autofocus required>
-						                    </div>
-                                            <div class="col-sm-3">
-						                        <input type="text" class="form-control" name="m_name" value="" placeholder="middle name" id="m_name" onkeyup="sync()" required>
-						                    </div>
-                                            <div class="col-sm-3">
-						                        <input type="text" class="form-control" name="l_name" value="" placeholder="last name"  required>
+						                    <div class="col-sm-10">
+						                        <input type="text" class="form-control" name="student_name" value="" autofocus required>
 						                    </div>
 						                </div>
 										<div class="form-group row">
@@ -159,7 +145,7 @@
 										<div class="form-group row">
 						                    <label for="father_name"  class="col-sm-2 col-form-label">Father name</label>
 						                    <div class="col-sm-5">
-						                        <input type="text" name="father_name" class="form-control" value="" id="father_name" required>
+						                        <input type="text" name="father_name" class="form-control" value="" required>
 						                    </div>
 						                    <label for="father_no"  class="col-sm-2 col-form-label">Phone no. </label>
 						                    <div class="col-sm-3">
@@ -182,7 +168,7 @@
 						                        <textarea name="address" rows="4" class="form-control" required></textarea>
 						                    </div>
 						                </div>
-						                <center><input type="submit" name="submit" value="Add" class="btn btn-outline-primary btn-lg"></center>
+						                <center><input type="submit" name="submit" value="Add student" class="btn btn-outline-primary btn-lg"></center>
 						            </form>
 						        </div>
 						    </div>
@@ -201,9 +187,6 @@
       <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
     </div>
-    <!-- Copyright -->
-
-
 
 </body>
 </html>

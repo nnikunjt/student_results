@@ -3,19 +3,9 @@
 
 
     if(isset($_POST['submit'])){
-        $user = $_POST['username'];
-        $pass = $_POST ['password'];
-
-        $insert_query = "INSERT INTO users(user_name,password) VALUES ('$user','$pass')";
-
-        if($conn->query($insert_query) === TRUE){
-			echo "Your account has been created successfully !";
-		}
-		else
-		{
-			echo "This student is not registered ";
-		}
-    }
+        
+			echo "This work  being done soon... ";
+	    }
 ?>
 
 
@@ -55,8 +45,8 @@
                                 <a href="dashboard.php" class="list-group-item ">Dashboard</a>
                                 <a href="add_student.php" class="list-group-item">Add student</a>
                                 <a href="add_result.php" class="list-group-item">Add result</a>
-                                <a href="" class="list-group-item disabled">Add user</a>
-                                <a href="settings.php" class="list-group-item">Settings</a>
+                                <a href="add_user.php" class="list-group-item ">Add user</a>
+                                <a href="settings.php" class="list-group-item disabled">Settings</a>
 
                             </ul>
                         </div>
@@ -65,23 +55,15 @@
 
                 <div class="col-md-9">
                     <div class="container-fluid">
-                        <h1>Add User</h1>
+                        <h1>Settings</h1>
                         <div class="card">
                             <div class="card-body">
                                 <form class="" action="" method="post">
                                     <div class="form-group row">
-                                        <label for="username" class="col-sm-2 col-form-label">User name</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="username" value="" autofocus required>
-                                        </div>
+                                        <h5>Work in process</h5>
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="password" class="col-sm-2 col-form-label">Password</label>
-                                        <div class="col-sm-10">
-                                            <input type="password" class="form-control" name="password" value="" required>
-                                        </div>
-                                    </div>
-                                    <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Add user">
+                                   
+                                    <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Apply">
                                 </form>
                             </div>
                         </div>

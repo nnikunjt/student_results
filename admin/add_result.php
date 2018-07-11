@@ -98,6 +98,8 @@
 								<a href="add_student.php" class="list-group-item">Add student</a>
 								<a href="" class="list-group-item disabled">Add result</a>
 								<a href="add_user.php" class="list-group-item">Add user</a>
+						        <a href="settings.php" class="list-group-item">Settings</a>
+
 							</ul>
 						</div>
 					</div>
@@ -179,10 +181,10 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer  py-3" align="right">Created by
-      <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
-      <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
-    </div>
+    <div class="footer  py-3" align="right">Created by  
+      <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+      <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
+
     <!-- Copyright -->
 
   </footer>
