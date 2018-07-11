@@ -2,9 +2,10 @@
     require_once('../database/connection.php');
 
 
-    if(isset($_POST['submit'])){
-        
-			echo "This work being done soon... ";
+    if(isset($_POST['backup'])){
+            $a=date('D., M jS, Y.g:i A');
+            echo $a;        
+		//	mtsqldump student_results students > backup
 	    }
 ?>
 
@@ -60,7 +61,8 @@
                             <div class="card-body">
                                 <form class="" action="" method="post">
                                     <div class="form-group row">
-                                        <h5>Work in process</h5>
+                                        <input type="submit" name="backup" value="Backup Tables" class="btn btn-primary"><pre>    </pre>
+                                        <input type="submit" name="resettable" value="reset Tables" class="btn btn-primary">
                                     </div>
                                    
                                     <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Apply">
