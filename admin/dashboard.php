@@ -75,7 +75,7 @@
                                             echo "<td>".$select_row['medium']."</td>";
                                             echo "<td>".$select_row['father_name']."</td>";
                                             echo "<td>".$select_row['father_no']."</td>";
-                                            echo "<td><a href='delete.php?del = $select_row[id]' class='btn btn-danger'>x</a></td>";
+                                            echo "<td><a href='delete.php?del=$select_row[roll_no]' class='btn btn-danger'>x</a></td>";
                                             echo "</tr>";
                                         }
                                      ?>
