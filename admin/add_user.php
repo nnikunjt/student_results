@@ -90,7 +90,7 @@
 
 
 <footer>
-<<<<<<< HEAD:admin/add_user.php
+
                    <div class="footer  py-3" align="right">Created by  
       <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
@@ -100,16 +100,5 @@
 
 
 
-=======
-                  <div class="footer  py-3" align="right" >Created by
-                  <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
-                </div>
-
-</footer>
-
-
-
->>>>>>> 332874512b5b10b78ac51e4a00463327635d7165:admin/add_user.php
 </body>
 </html>

@@ -1,0 +1,41 @@
+
+.container{
+      padding-top: 1rem;
+    }
+
+
+.nav label{
+	color: #d3d3d3;
+
+}
+.btn-success{
+	margin-left: 4rem;
+}
+.t-main{
+	margin-top: 2REM;
+	width: 50%;
+
+}
+
+.card{
+	margin-top: .5rem;
+	margin-bottom: .6rem;
+}
+
+.footer{
+ 	background-color: #F5FFFA;
+ 	color: #808080;
+ 	position: fixed;
+   	margin-bottom: .3rem;
+   	flex: 0 0 auto;
+ 	bottom:0px;
+
+	height: 40px;
+	width: 100%;
+ 	padding-top: 2rem;
+
+ }
+ .footer a{
+ 	margin-left: .5rem;
+ 	margin-right: .5rem;
+ }
