@@ -50,51 +50,7 @@
       <a href="index.php" class="navbar-brand">Yash classes</a>
     </div>
 
-     <div class="form-group">
-      <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalCenter" >
-  Admin
-</button></div>
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Sing in</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-
-          <form class="" action="admin/dashboard.php" method="post">
-            <div class="form-group row">
-                        <label for="username" class="form-label">User name</label>
-
-                            <input type="text" class="form-control" name="username" value="" autofocus required>
-
-                    </div>
-            <div class="form-group row">
-                        <label for="password" class="form-label">Password</label>
-
-                            <input type="password" class="form-control" name="password" value="" required>
-
-                    </div>
-            <input type="submit" class="btn btn-outline-primary btn-lg" name="login" value="Login">
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+    
 </nav>
 
 

@@ -87,6 +87,8 @@
                                 <a href="add_student.php" class="list-group-item disabled">Add student</a>
                                 <a href="add_result.php" class="list-group-item">Add result</a>
                                 <a href="add_user.php" class="list-group-item">Add user</a>
+                                <a href="settings.php" class="list-group-item">Settings</a>
+
                             </ul>
                         </div>
 					</div>
