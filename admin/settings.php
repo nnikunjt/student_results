@@ -15,6 +15,20 @@
                 echo "not working";
             }
 	    }
+
+        if(isset($_POST['backup_results'])){
+                date_default_timezone_set('Asia/Kolkata');
+                $a=date('j-M-Y.g:i A');
+
+                $query = "CREATE TABLE `backup_results_$a` as SELECT * FROM results";
+
+                if($conn->query($query) === TRUE){
+                    echo "done";
+                }
+                else {
+                    echo "not working";
+                }
+    	    }
 ?>
 
 
