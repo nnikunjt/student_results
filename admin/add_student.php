@@ -66,6 +66,13 @@
 			padding-top: 1rem;
 		}
 	</style>
+    <script>
+        function sync(){
+            var m_name = document.getElementById('m_name');
+            var father_name = document.getElementById('father_name');
+            father_name.value = m_name.value;
+        }
+    </script>
 </head>
 <body>
 
@@ -113,7 +120,7 @@
 						                        <input type="text" class="form-control" name="first_name" value="" placeholder="firstname" autofocus required style='text-transform:uppercase'>
 						                    </div>
 						                    <div class="col-sm-3">
-						                        <input type="text" class="form-control" name="middle_name" value="" placeholder="middlename" required style='text-transform:uppercase'>
+						                        <input type="text" class="form-control" name="middle_name" value="" placeholder="middlename" required style='text-transform:uppercase' id="m_name" onkeyup="sync()">
 						                    </div>
 						                    <div class="col-sm-3">
 						                        <input type="text" class="form-control" name="last_name" value="" placeholder="lastname" required style='text-transform:uppercase'>
@@ -155,7 +162,7 @@
 										<div class="form-group row">
 						                    <label for="father_name"  class="col-sm-2 col-form-label">Father name</label>
 						                    <div class="col-sm-5">
-						                        <input type="text" name="father_name" class="form-control" value="" required style='text-transform:uppercase'>
+						                        <input type="text" name="father_name" class="form-control" value="" required style='text-transform:uppercase'  id="father_name">
 						                    </div>
 						                    <label for="father_no"  class="col-sm-2 col-form-label">Phone no. </label>
 						                    <div class="col-sm-3">
