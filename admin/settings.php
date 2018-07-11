@@ -2,10 +2,18 @@
     require_once('../database/connection.php');
 
 
-    if(isset($_POST['backup'])){
-            $a=date('D., M jS, Y.g:i A');
-            echo $a;        
-		//	mtsqldump student_results students > backup
+    if(isset($_POST['backup_students'])){
+            date_default_timezone_set('Asia/Kolkata');
+            $a=date('j-M-Y.g:i A');
+
+            $query = "CREATE TABLE `backup_students_$a` as SELECT * FROM students";
+
+            if($conn->query($query) === TRUE){
+                echo "done";
+            }
+            else {
+                echo "not working";
+            }
 	    }
 ?>
 
@@ -61,10 +69,11 @@
                             <div class="card-body">
                                 <form class="" action="" method="post">
                                     <div class="form-group row">
-                                        <input type="submit" name="backup" value="Backup Tables" class="btn btn-primary"><pre>    </pre>
+                                        <input type="submit" name="backup_students" value="Backup students Tables" class="btn btn-primary"><pre>    </pre>
+                                        <input type="submit" name="backup_results" value="Backup results Tables" class="btn btn-primary"><pre>    </pre>
                                         <input type="submit" name="resettable" value="reset Tables" class="btn btn-primary">
                                     </div>
-                                   
+
                                     <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Apply">
                                 </form>
                             </div>
@@ -77,7 +86,7 @@
 
 <footer>
 
-                   <div class="footer  py-3" align="right">Created by  
+                   <div class="footer  py-3" align="right">Created by
       <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
     </div>
