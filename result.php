@@ -182,7 +182,6 @@
 
     <!-- Footer Elements -->
 
-
      <div class="footer  py-3" align="right">Created by  
       <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
    <div class="footer  py-3" align="right">Created by

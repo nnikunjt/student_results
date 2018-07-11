@@ -4,7 +4,7 @@
 
     if(isset($_POST['submit'])){
         
-			echo "This work  being done soon... ";
+			echo "This work being done soon... ";
 	    }
 ?>
 

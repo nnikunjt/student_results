@@ -3,7 +3,10 @@
 
 
 	if(isset($_POST['submit'])){
-		$name = $_POST['student_name'];
+		$fname = $_POST['first_name'];
+		$mname = $_POST['middle_name'];
+		$lname = $_POST['last_name'];
+		$name = $fname." ".$mname." ".$lname;
 		$birthdate = $_POST['birthdate'];
 		$std = $_POST['std'];
 		$medium = $_POST['medium'];
@@ -12,8 +15,9 @@
 		$father_no = $_POST['father_no'];
 		$mother_no = $_POST['mother_no'];
 		$address = $_POST['address'];
-
-
+		$name = strtoupper($name);
+		$f_name=strtoupper($f_name);
+		$m_name=strtoupper($m_name);
         $year = date('Y');
         $year = substr($year,2,3);
 
@@ -105,8 +109,14 @@
 						            <form class="" action="" method="post">
 						                <div class="form-group row">
 						                    <label for="student_name" class="col-sm-2 col-form-label">Student name</label>
-						                    <div class="col-sm-10">
-						                        <input type="text" class="form-control" name="student_name" value="" autofocus required>
+						                    <div class="col-sm-3">
+						                        <input type="text" class="form-control" name="first_name" value="" placeholder="firstname" autofocus required style='text-transform:uppercase'>
+						                    </div>
+						                    <div class="col-sm-3">
+						                        <input type="text" class="form-control" name="middle_name" value="" placeholder="middlename" required style='text-transform:uppercase'>
+						                    </div>
+						                    <div class="col-sm-3">
+						                        <input type="text" class="form-control" name="last_name" value="" placeholder="lastname" required style='text-transform:uppercase'>
 						                    </div>
 						                </div>
 										<div class="form-group row">
@@ -145,7 +155,7 @@
 										<div class="form-group row">
 						                    <label for="father_name"  class="col-sm-2 col-form-label">Father name</label>
 						                    <div class="col-sm-5">
-						                        <input type="text" name="father_name" class="form-control" value="" required>
+						                        <input type="text" name="father_name" class="form-control" value="" required style='text-transform:uppercase'>
 						                    </div>
 						                    <label for="father_no"  class="col-sm-2 col-form-label">Phone no. </label>
 						                    <div class="col-sm-3">
@@ -155,7 +165,7 @@
 						                <div class="form-group row">
 						                    <label for="mother_name"  class="col-sm-2 col-form-label">Mother name</label>
 						                    <div class="col-sm-5">
-						                        <input type="text" name="mother_name" class="form-control" value="" required>
+						                        <input type="text" name="mother_name" class="form-control" value="" required style='text-transform:uppercase'   >
 						                    </div>
 						                    <label for="mother_no"  class="col-sm-2 col-form-label">Phone no. </label>
 						                    <div class="col-sm-3">
@@ -165,7 +175,7 @@
 						                <div class="form-group row">
 						                    <label for="address" class="col-sm-2 col-form-label">Address</label>
 						                    <div class="col-sm-10">
-						                        <textarea name="address" rows="4" class="form-control" required></textarea>
+						                        <textarea name="address" rows="4" class="form-control" required style='text-transform:uppercase'></textarea>
 						                    </div>
 						                </div>
 						                <center><input type="submit" name="submit" value="Add student" class="btn btn-outline-primary btn-lg"></center>
