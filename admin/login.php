@@ -49,5 +49,19 @@
 	</div>
 
 </div>
+
+
+        <footer class="page-footer font-small unique-color-dark pt-4">
+
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+     <div class="footer  py-3" align="right">Created by  
+      <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+      <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
 </body>
 </html>

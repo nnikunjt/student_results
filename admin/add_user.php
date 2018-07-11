@@ -1,5 +1,5 @@
 <?php
-    require_once('connection.php');
+    require_once('../database/connection.php');
 
 
     if(isset($_POST['submit'])){
@@ -32,15 +32,15 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    	<link href="style.css" rel="stylesheet">
+    	<link href="../css/style.css" rel="stylesheet">
     </head>
     <body>
         <nav class="navbar navbar-dark navbar-expand-md bg-dark">
             <div class="container-fluid">
-                <a href="index.php" class="navbar-brand">Yash classes</a>
+                <a href="../index.php" class="navbar-brand">Yash classes</a>
             </div>
             <ul class="navbar-nav">
-            <a href="index.php" type="button" class="btn btn-primary " >Log out</a>
+            <a href="../index.php" type="button" class="btn btn-primary " >Log out</a>
         </ul>
         </nav>
         <div class="container-fluid">
@@ -79,7 +79,7 @@
                                             <input type="password" class="form-control" name="password" value="" required>
                                         </div>
                                     </div>
-                                    <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="submit">
+                                    <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Add user">
                                 </form>
                             </div>
                         </div>
@@ -90,14 +90,26 @@
 
 
 <footer>
-                  <div class="footer  py-3" align="right" >Created by  
+<<<<<<< HEAD:admin/add_user.php
+                   <div class="footer  py-3" align="right">Created by  
+      <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+      <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
+    </div>
+
+</footer>
+
+
+
+=======
+                  <div class="footer  py-3" align="right" >Created by
                   <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
                   <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
                 </div>
-  
-</footer>         
-    
 
- 
+</footer>
+
+
+
+>>>>>>> 332874512b5b10b78ac51e4a00463327635d7165:admin/add_user.php
 </body>
 </html>

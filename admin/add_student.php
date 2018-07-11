@@ -1,5 +1,5 @@
 <?php
-  	require_once("connection.php");
+  	require_once("../database/connection.php");
 
 
 	if(isset($_POST['submit'])){
@@ -13,7 +13,7 @@
 		$mother_no = $_POST['mother_no'];
 		$address = $_POST['address'];
 
-        
+
         $year = date('Y');
         $year = substr($year,2,3);
 
@@ -56,7 +56,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
 	<style media="screen">
 		.container{
 			padding-top: 1rem;
@@ -67,10 +67,10 @@
 
 	<nav class="navbar navbar-dark navbar-expand-md bg-dark">
 		<div class="container-fluid">
-			<a href="index.php" class=" navbar-brand">Yash classes</a>
+			<a href="../index.php" class=" navbar-brand">Yash classes</a>
 		</div>
 		<ul class="navbar-nav">
-			<a href="index.php" type="button" class="btn btn-primary " >Log out</a>
+			<a href="../index.php" type="button" class="btn btn-primary " >Log out</a>
 		</ul>
 	</nav>
 	<div class="container-fluid">
@@ -166,7 +166,7 @@
 						                        <textarea name="address" rows="4" class="form-control" required></textarea>
 						                    </div>
 						                </div>
-						                <center><input type="submit" name="submit" value="Submit" class="btn btn-outline-primary btn-lg"></center>
+						                <center><input type="submit" name="submit" value="Add student" class="btn btn-outline-primary btn-lg"></center>
 						            </form>
 						        </div>
 						    </div>
@@ -181,13 +181,21 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer  py-3" align="right">Created by  
+<<<<<<< HEAD:admin/add_student.php
+     <div class="footer  py-3" align="right">Created by  
+      <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+      <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
+=======
+    <div class="footer  py-3" align="right">Created by
       <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
+>>>>>>> 332874512b5b10b78ac51e4a00463327635d7165:admin/add_student.php
     </div>
-    <!-- Copyright -->
 
-  
+<<<<<<< HEAD:admin/add_student.php
+=======
+
+>>>>>>> 332874512b5b10b78ac51e4a00463327635d7165:admin/add_student.php
 
 </body>
 </html>

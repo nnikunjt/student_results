@@ -1,5 +1,5 @@
 <?php
-	require_once("connection.php");
+	require_once("../database/connection.php");
 
 
 	if(isset($_POST['submit'])){
@@ -12,21 +12,21 @@
 		$science_to = $_POST['science_to'];
 		$ss_to = $_POST['ss_to'];
 		$mess;
-      	
+
           if ($math_to=="") {
-       	       $math_to=0;  
-       	       $math=0;             	
-             }	    
+       	       $math_to=0;
+       	       $math=0;
+             }
 
         	if ($science_to=="") {
-       	       $science_to=0;  
-       	       $science=0;             	
-             }	    
+       	       $science_to=0;
+       	       $science=0;
+             }
              if ($ss_to=="") {
-       	       $ss_to=0;  
-       	       $sst=0;             	
-             }	
-            
+       	       $ss_to=0;
+       	       $sst=0;
+             }
+
 
 
 		$per = (($math+$science+$sst)*100)/($math_to+$science_to+$ss_to);
@@ -36,15 +36,15 @@
 		$insert_query = "INSERT INTO results(roll_no,test_date,math_obtain,sci_obtain,sst_obtain,math_total,sci_total,sst_total,percentage) VALUES('$roll_no','$test_date','$math','$science','$sst','$math_to','$science_to','$ss_to','$per')";
 
 		if($conn->query($insert_query) === TRUE){
-			$mess = "Your account has been created successfully !";	
-			
+			$mess = "Your account has been created successfully !";
+
 		}
 		else
 		{
 			$mess= "This student is not registered ";
 		}
 
-		
+
 
 	}
  ?>
@@ -63,7 +63,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
 	<style media="screen">
 		.container{
 			padding-top: 1rem;
@@ -81,7 +81,7 @@
 			<a href="#" class="navbar-brand">Yash classes</a>
 		</div>
 		<ul class="navbar-nav">
-      		<a href="index.php" type="button" class="btn btn-primary " >Log out</a>
+      		<a href="../index.php" type="button" class="btn btn-primary " >Log out</a>
 		</ul>
 	</nav>
 	<div class="container-fluid">
@@ -111,7 +111,7 @@
 						   <h1 class="card-title">Add Result</h1>
 						   <div class="card">
 							   <div class="card-body">
-								   <form class="" action="#" method="post" >
+								   <form class="" action="" method="post" >
 									   <div class="form-group row">
 										   <label for="roll_no" class="col-sm-2 col-form-label">Roll no.</label>
 								   <div class="col-sm-4">
@@ -179,14 +179,20 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer  py-3" align="right">Created by  
+<<<<<<< HEAD:admin/add_result.php
+     <div class="footer  py-3" align="right">Created by  
+      <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+      <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
+=======
+    <div class="footer  py-3" align="right">Created by
       <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
+>>>>>>> 332874512b5b10b78ac51e4a00463327635d7165:admin/add_result.php
     </div>
     <!-- Copyright -->
 
   </footer>
-  
+
 
 </body>
 </html>

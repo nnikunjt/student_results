@@ -1,6 +1,6 @@
 <?php
 
-    require_once('connection.php');
+    require_once('database/connection.php');
 
 
     if(isset($_POST['login']))
@@ -19,7 +19,7 @@
 
         if($username == $user && $password == $pass)
         {
-            header('location:dashboard.php');
+            header('location:admin/dashboard.php');
         }
         echo "Invalid username or password.";
     }
@@ -38,7 +38,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <link href="style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
 
 
@@ -52,6 +52,8 @@
 
 
 
+<<<<<<< HEAD
+=======
      <div class="form-group">
       <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalCenter" >
   Admin
@@ -72,7 +74,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
 
-          <form class="" action="" method="post">
+          <form class="" action="admin/dashboard.php" method="post">
             <div class="form-group row">
                         <label for="username" class="form-label">User name</label>
 
@@ -97,6 +99,7 @@
     </div>
   </div>
 </div>
+>>>>>>> 332874512b5b10b78ac51e4a00463327635d7165
 </nav>
 
 
@@ -127,9 +130,15 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer  py-3" align="right">Created by  
+<<<<<<< HEAD
+      <div class="footer  py-3" align="right">Created by  
+      <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+      <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
+=======
+    <div class="footer  py-3" align="right">Created by
       <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
+>>>>>>> 332874512b5b10b78ac51e4a00463327635d7165
     </div>
     <!-- Copyright -->
 
