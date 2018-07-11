@@ -157,7 +157,7 @@
 											   <input type="text" name="ss_to" class="form-control" value="">
 										   </div>
 									   </div>
-									   <center><input type="submit" name="submit" value="Add result" class="btn btn-outline-primary btn-lg">
+									   <center><input type="submit" name="submit" value="Add" class="btn btn-outline-primary btn-lg">
 									   </center>
 								</form>
 							   </div>

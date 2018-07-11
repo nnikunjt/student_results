@@ -68,13 +68,13 @@
                                     <?php
                                         while($select_row = mysqli_fetch_array($select_run)){
                                             echo "<tr>";
-                                            echo "<td>".$select_row['id']."</td>";
-                                            echo "<td>".$select_row['roll_no']."</td>";
-                                            echo "<td>".$select_row['student_name']."</td>";
-                                            echo "<td>".$select_row['std']."</td>";
-                                            echo "<td>".$select_row['medium']."</td>";
-                                            echo "<td>".$select_row['father_name']."</td>";
-                                            echo "<td>".$select_row['father_no']."</td>";
+                                            echo "<td><a href='update.php?update=$select_row[roll_no]' class='nav-link text-dark'>".$select_row['id']."</a></td>";
+                                            echo "<td><a href='update.php?update=$select_row[roll_no]' class='nav-link text-dark'>".$select_row['roll_no']."</a></td>";
+                                            echo "<td><a href='update.php?update=$select_row[roll_no]' class='nav-link text-dark'>".$select_row['student_name']."</a></td>";
+                                            echo "<td><a href='update.php?update=$select_row[roll_no]' class='nav-link text-dark'>".$select_row['std']."</a></td>";
+                                            echo "<td><a href='update.php?update=$select_row[roll_no]' class='nav-link text-dark'>".$select_row['medium']."</a></td>";
+                                            echo "<td><a href='update.php?update=$select_row[roll_no]' class='nav-link text-dark'>".$select_row['father_name']."</a></td>";
+                                            echo "<td><a href='update.php?update=$select_row[roll_no]' class='nav-link text-dark'>".$select_row['father_no']."</a></td>";
                                             echo "<td><a href='delete.php?del=$select_row[roll_no]' class='btn btn-danger'>x</a></td>";
                                             echo "</tr>";
                                         }

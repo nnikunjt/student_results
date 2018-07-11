@@ -1,9 +1,20 @@
 <?php
   	require_once("../database/connection.php");
 
+    if(isset($_GET['update'])){
+        $roll_no =$_GET['update'];
 
-	if(isset($_POST['submit'])){
-		$fname = $_POST['f_name'];
+        $select_query ="SELECT * FROM students WHERE roll_no = $roll_no";
+        $select_run=mysqli_query($conn,$select_query);
+        $res=mysqli_fetch_array($select_run);
+
+        $name= explode(" ",$res['student_name']);
+
+    }
+
+
+	if(isset($_POST['update'])){
+        $fname = $_POST['f_name'];
         $mname = $_POST['m_name'];
         $lname = $_POST['l_name'];
         $name =$fname." ".$mname." ".$lname;
@@ -17,32 +28,12 @@
 		$address = $_POST['address'];
 
 
-        $year = date('Y');
-        $year = substr($year,2,3);
+		$update_query ="UPDATE students SET student_name ='$name', std ='$std', medium='$medium', birthdate='$birthdate', father_name ='$f_name', father_no='$father_no',mother_no='$mother_no',mother_name='$m_name', address='$address' WHERE roll_no=$roll_no";
 
-		$insert_query ="INSERT INTO students(student_name,std,medium,birthdate,father_name,father_no,mother_name,mother_no,address
-		) VALUES('$name','$std','$medium','$birthdate','$f_name','$father_no','$m_name','$mother_no','$address')";
-
-		if($conn->query($insert_query) === TRUE)
+		if($conn->query($update_query) === TRUE)
             {
-                //echo "Your account has been created successfully !";
-                $id = $conn->insert_id;
-                if ($id<10) {
-                	$id = "0".$id;
-                	}
-                $roll_no= $year.$std.$id;
-                //echo $roll_no;
-                $update_query="UPDATE students SET roll_no=$roll_no WHERE id=$id";
-                if ($conn->query($update_query) === TRUE) {
-                    echo "Your account has been created successfully !";
-                }
-                else
-                {
-                    echo "Problem occurd during registration proccess.";
-                }
-
+                header('location:dashboard.php');
             }
-
 	}
 ?>
 
@@ -94,7 +85,7 @@
                         <div class="card-body">
                             <ul class="list-group">
                                 <a href="dashboard.php" class="list-group-item">Dashboard</a>
-                                <a href="add_student.php" class="list-group-item disabled">Add student</a>
+                                <a href="add_student.php" class="list-group-item">Add student</a>
                                 <a href="add_result.php" class="list-group-item">Add result</a>
                                 <a href="add_user.php" class="list-group-item">Add user</a>
                             </ul>
@@ -107,82 +98,82 @@
 					<div class="row">
 						<div class="col-md-1"></div>
 						<div class="col-md-10">
-							<h1 class="card-title">Add student</h1>
+							<h1 class="card-title">Update student details</h1>
 						    <div class="card">
 						        <div class="card-body">
 						            <form class="" action="" method="post">
-						                <div class="form-group row">
+                                        <div class="form-group row">
 						                    <label for="student_name" class="col-sm-2 col-form-label">Student name</label>
 						                    <div class="col-sm-3">
-						                        <input type="text" class="form-control" name="f_name" value="" placeholder="first name" autofocus required>
+						                        <input type="text" class="form-control" name="f_name" value="<?php echo $name[0]; ?>" placeholder="first name" autofocus required>
 						                    </div>
                                             <div class="col-sm-3">
-						                        <input type="text" class="form-control" name="m_name" value="" placeholder="middle name" id="m_name" onkeyup="sync()" required>
+						                        <input type="text" class="form-control" name="m_name" value="<?php echo $name[1]; ?>" placeholder="middle name" id="m_name" onkeyup="sync()" required>
 						                    </div>
                                             <div class="col-sm-3">
-						                        <input type="text" class="form-control" name="l_name" value="" placeholder="last name"  required>
+						                        <input type="text" class="form-control" name="l_name" value="<?php echo $name[2]; ?>" placeholder="last name"  required>
 						                    </div>
 						                </div>
 										<div class="form-group row">
 										   <label for="birthdate" class="col-sm-2 col-form-label">Birthdate</label>
 										   <div class="col-sm-4">
-											   <input type="date" class="form-control" name="birthdate" value="" required>
+											   <input type="date" class="form-control" name="birthdate" value="<?php echo $res['birthdate']; ?>" required>
 										   </div>
 									   </div>
 						                <div class="form-group row">
 						                    <label for="std" class="col-sm-2 col-form-label">Std.</label>
 						                    <div class="col-sm-4">
 						                        <select class="form-control" name="std">
-						                            <option value="01">1</option>
-						                            <option value="02">2</option>
-						                            <option value="03">3</option>
-						                            <option value="04">4</option>
-						                            <option value="05">5</option>
-						                            <option value="06">6</option>
-						                            <option value="07">7</option>
-						                            <option value="08">8</option>
-						                            <option value="09">9</option>
-						                            <option>10</option>
-                                                    <option>11</option>
-                                                    <option>12</option>
+						                            <option value="01" <?php if($res['std'] == '01'){ echo "selected";} ?>>1</option>
+						                            <option value="02" <?php if($res['std'] == '02'){ echo "selected";} ?>>2</option>
+						                            <option value="03"<?php if($res['std'] == '03'){ echo "selected";} ?>>3</option>
+						                            <option value="04" <?php if($res['std'] == '04'){ echo "selected";} ?>>4</option>
+						                            <option value="05" <?php if($res['std'] == '05'){ echo "selected";} ?>>5</option>
+						                            <option value="06" <?php if($res['std'] == '06'){ echo "selected";} ?>>6</option>
+						                            <option value="07" <?php if($res['std'] == '07'){ echo "selected";} ?>>7</option>
+						                            <option value="08" <?php if($res['std'] == '08'){ echo "selected";} ?>>8</option>
+						                            <option value="09" <?php if($res['std'] == '09'){ echo "selected";} ?>>9</option>
+						                            <option <?php if($res['std'] == '10'){ echo "selected";} ?>>10</option>
+                                                    <option <?php if($res['std'] == '11'){ echo "selected";} ?>>11</option>
+                                                    <option <?php if($res['std'] == '12'){ echo "selected";} ?>>12</option>
 						                        </select>
 						                    </div>
 						                    <label for="medium" class="col-sm-2 col-form-label">Medium</label>
 						                    <div class="col-sm-4">
 						                        <select class="form-control" name="medium">
-						                            <option>Gujarati</option>
-						                            <option>English(GSEB)</option>
-						                            <option>English(CBSC)</option>
+						                            <option <?php if($res['medium'] == 'Gujarati'){ echo "selected";} ?>>Gujarati</option>
+						                            <option <?php if($res['medium'] == 'English(GSEB)'){ echo "selected";} ?>>English(GSEB)</option>
+						                            <option <?php if($res['medium'] == 'English(CBSC)'){ echo "selected";} ?> >English(CBSC)</option>
 						                        </select>
 						                    </div>
 						                </div>
 										<div class="form-group row">
 						                    <label for="father_name"  class="col-sm-2 col-form-label">Father name</label>
 						                    <div class="col-sm-5">
-						                        <input type="text" name="father_name" class="form-control" value="" id="father_name" required>
+						                        <input type="text" name="father_name" class="form-control" id="father_name" value="<?php echo $name[1]; ?>" required>
 						                    </div>
 						                    <label for="father_no"  class="col-sm-2 col-form-label">Phone no. </label>
 						                    <div class="col-sm-3">
-						                        <input type="text" name="father_no" class="form-control" value="" required>
+						                        <input type="text" name="father_no" class="form-control" value="<?php echo $res['father_no']; ?>" required>
 						                    </div>
 						                </div>
 						                <div class="form-group row">
 						                    <label for="mother_name"  class="col-sm-2 col-form-label">Mother name</label>
 						                    <div class="col-sm-5">
-						                        <input type="text" name="mother_name" class="form-control" value="" required>
+						                        <input type="text" name="mother_name" class="form-control" value="<?php echo $res['mother_name']; ?>" required>
 						                    </div>
 						                    <label for="mother_no"  class="col-sm-2 col-form-label">Phone no. </label>
 						                    <div class="col-sm-3">
-						                        <input type="text" name="mother_no" class="form-control" value="">
+						                        <input type="text" name="mother_no" class="form-control" value="<?php echo $res['mother_no']; ?>">
 						                    </div>
 						                </div>
 						                <div class="form-group row">
 						                    <label for="address" class="col-sm-2 col-form-label">Address</label>
 						                    <div class="col-sm-10">
-						                        <textarea name="address" rows="4" class="form-control" required></textarea>
+						                        <textarea name="address" rows="4" class="form-control" required><?php echo $res['address']; ?></textarea>
 						                    </div>
 						                </div>
-						                <center><input type="submit" name="submit" value="Add" class="btn btn-outline-primary btn-lg"></center>
+						                <center><input type="submit" name="update" value="Update" class="btn btn-outline-primary btn-lg"></center>
 						            </form>
 						        </div>
 						    </div>
