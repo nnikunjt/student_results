@@ -23,10 +23,10 @@
     <body>
         <nav class="navbar navbar-dark navbar-expand-md bg-dark">
             <div class="container-fluid">
-                <a href="index.php" class="navbar-brand">Yash classes</a>
+                <a href="../index.php" class="navbar-brand">Yash classes</a>
             </div>
             <ul class="navbar-nav">
-            <a href="index.php" type="button" class="btn btn-primary " >Log out</a>
+            <a href="../index.php" type="button" class="btn btn-primary " >Log out</a>
         </ul>
         </nav>
         <div class="container-fluid">
@@ -76,7 +76,7 @@
                                             echo "<td><a href='update.php?update=$select_row[roll_no]' class='nav-link text-dark'>".$select_row['medium']."</a></td>";
                                             echo "<td><a href='update.php?update=$select_row[roll_no]' class='nav-link text-dark'>".$select_row['father_name']."</a></td>";
                                             echo "<td><a href='update.php?update=$select_row[roll_no]' class='nav-link text-dark'>".$select_row['father_no']."</a></td>";
-                                            echo "<td><a href='delete.php?del=$select_row[roll_no]' class='btn btn-danger'>x</a></td>";
+                                            echo "<td><a href='delete.php?del=$select_row[roll_no]' class='btn btn-danger'>X</a></td>";
                                             echo "</tr>";
                                         }
                                      ?>
