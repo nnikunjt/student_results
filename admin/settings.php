@@ -103,10 +103,7 @@
                                         <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables
                                     </button>
 
-                                        <input type="submit" name="backup_students" value="Backup students Tables" class="btn btn-primary"><pre>    </pre>
-                                        <input type="submit" name="backup_results" value="Backup results Tables" class="btn btn-primary"><pre>    </pre>
-                                        <input type="submit" name="resettable" value="reset Tables" class="btn btn-primary">
-
+                                      
                                     </div>
 
                                     <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Apply">
