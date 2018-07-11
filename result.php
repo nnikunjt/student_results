@@ -1,6 +1,6 @@
 <?php
 
-    require_once('connection.php');
+    require_once('database/connection.php');
 
 
     if(isset($_POST['login']))
@@ -19,7 +19,7 @@
 
         if($username == $user && $password == $pass)
         {
-            header('location:dashboard.php');
+            header('location:admin/dashboard.php');
         }
         echo "Invalid username or password.";
     }
@@ -39,7 +39,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <link href="style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <style media="screen">
         .col-sm-4{
             padding-top: .4rem;
@@ -228,7 +228,7 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer  py-3" align="right">Created by  
+    <div class="footer  py-3" align="right">Created by
       <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
     </div>

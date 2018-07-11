@@ -1,5 +1,5 @@
 <?php
-    require_once('connection.php');
+    require_once('..\database\connection.php');
 
     $select_query="SELECT * FROM students";
     $select_run = mysqli_query($conn,$select_query);
@@ -18,7 +18,7 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    	<link href="style.css" rel="stylesheet">
+    	<link href="../css/style.css" rel="stylesheet">
     </head>
     <body>
         <nav class="navbar navbar-dark navbar-expand-md bg-dark">
@@ -61,6 +61,7 @@
                                         <th scope="col">Medium</th>
                                         <th scope="col">Father Name</th>
                                         <th scope="col">Mobile no.</th>
+                                        <th scope="col">Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -74,6 +75,7 @@
                                             echo "<td>".$select_row['medium']."</td>";
                                             echo "<td>".$select_row['father_name']."</td>";
                                             echo "<td>".$select_row['father_no']."</td>";
+                                            echo "<td><a href='delete.php?del = $select_row[id]' class='btn btn-danger'>x</a></td>";
                                             echo "</tr>";
                                         }
                                      ?>
@@ -91,7 +93,7 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer  py-3" align="right">Created by  
+    <div class="footer  py-3" align="right">Created by
       <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
     </div>
