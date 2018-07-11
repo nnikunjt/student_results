@@ -3,10 +3,17 @@
 
 
     if(isset($_POST['backup'])){
-            $a=date('D., M jS, Y.g:i A');
-            echo $a;        
+          //  $a=date('D., M jS, Y.g:i A');
+          //  echo $a;        
 		//	mtsqldump student_results students > backup
-	    }
+	    echo "button1 is working";
+        }
+
+     if(isset($_POST['resetok'])){
+            
+            echo "button is working";        
+        }
+
 ?>
 
 
@@ -62,10 +69,13 @@
                                 <form class="" action="" method="post">
                                     <div class="form-group row">
                                         <input type="submit" name="backup" value="Backup Tables" class="btn btn-primary"><pre>    </pre>
-                                        <input type="submit" name="resettable" value="reset Tables" class="btn btn-primary">
+                                        <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables
+                                    </button>
                                     </div>
                                    
                                     <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Apply">
+                                    
+
                                 </form>
                             </div>
                         </div>
@@ -73,6 +83,35 @@
                 </div>
         </div>
         </div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reset Tables warning</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        First, Do this you have to Make your backup. If you Don't have made back up, make it.
+        <br>
+        If you click ok' then you lose all saved data from your tables<br>
+        result, students<br>
+   
+        Did you really want to do that?<br>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <input type="submit" name="resetok" value="OK" class="btn btn-primary" data-dismiss="modal" >
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 <footer>
