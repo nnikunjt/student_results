@@ -3,16 +3,10 @@
 
 
 
-    if(isset($_POST['backup'])){
-          //  $a=date('D., M jS, Y.g:i A');
-          //  echo $a;        
-		//	mtsqldump student_results students > backup
-	    echo "button1 is working";
-        }
 
      if(isset($_POST['resetok'])){
-            
-            echo "button is working";        
+
+            echo "button is working";
         }
 
 
@@ -99,15 +93,17 @@
                                 <form class="" action="" method="post">
                                     <div class="form-group row">
 
-                                        <input type="submit" name="backup" value="Backup Tables" class="btn btn-primary"><pre>    </pre>
-                                        <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables
-                                    </button>
 
-                                      
+
+                                        <input type="submit" name="backup_students" value="Backup students Table" class="btn btn-primary"><pre>    </pre>
+                                        <input type="submit" name="backup_results" value="Backup results Table" class="btn btn-primary"><pre>    </pre>
+                                        <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables</button>
+
+
                                     </div>
 
                                     <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Apply">
-                                    
+
 
                                 </form>
                             </div>
@@ -131,14 +127,14 @@
         <br>
         If you click ok' then you lose all saved data from your tables<br>
         result, students<br>
-   
+
         Did you really want to do that?<br>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <input type="submit" name="resetok" value="OK" class="btn btn-primary" data-dismiss="modal" >
-       
+
       </div>
     </div>
   </div>
