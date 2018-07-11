@@ -101,7 +101,6 @@ SESSION_START();
 
 
 
-
                                         <input type="submit" name="backup_students" value="Backup students Table" class="btn btn-primary"><pre>    </pre>
                                         <input type="submit" name="backup_results" value="Backup results Table" class="btn btn-primary"><pre>    </pre>
                                         <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables</button>
