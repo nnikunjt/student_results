@@ -27,6 +27,7 @@
  	color: #808080;
  	position: fixed;
    	margin-bottom: .3rem;
+   	margin-left: 1rem;
    	flex: 0 0 auto;
  	bottom:0px;
 
@@ -39,3 +40,6 @@
  	margin-left: .5rem;
  	margin-right: .5rem;
  }
+.f2{
+	background-color: transparent;s
+}

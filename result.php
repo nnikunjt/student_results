@@ -177,20 +177,19 @@
 }
 ?>
 
-
-<footer class="page-footer font-small unique-color-dark pt-4">
-
-    <!-- Footer Elements -->
-
-     <div class="footer  py-3" align="right">Created by  
-      <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
-   <div class="footer  py-3" align="right">Created by
-      <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
-      <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
-
-    </div>
-    <!-- Copyright -->
-
+   <footer class="page-footer font-small unique-color-dark pt-4">
+    <div class="footer  py-3">
+     
+            <div align="left">
+             <span class="text-muted" >B-9, Chitrakoot Society, Zadeshwar Road,Bharuch.</span>
+                </div></div>
+    <div class="footer py-3 " style="background-color: transparent;" >
+       <div align="right"> Created by
+                  <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
+            </div>
+        </div>
+    
   </footer>
 
 </body>
