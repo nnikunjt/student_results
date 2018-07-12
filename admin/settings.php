@@ -13,25 +13,21 @@ SESSION_START();
      if(isset($_POST['resetok'])){
 
          $sql_query='TRUNCATE TABLE results';
-         // $sql_query2='TRUNCATE TABLE students';
+          $sql_query2='DELETE FROM students';
 
           if($conn->query($sql_query) === TRUE){
-
-                $auto="ALTER TABLE results AUTO_INCREMENT = 1";
-                 if($conn->query($auto) === TRUE){
-                      echo "done";
-                 }
+                echo " result done";
             }
             else {
                 echo "result not working";
             }
-        /*    if($conn->query($sql_query2) === TRUE){
+            if($conn->query($sql_query2) === TRUE){
                 echo " students done";
             }
             else {
-                echo "students not working";
-            } */
-
+                echo " students not working";
+            }
+       
 
         }
 
