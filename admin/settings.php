@@ -13,7 +13,7 @@ SESSION_START();
      if(isset($_POST['resetok'])){
 
          $sql_query='TRUNCATE TABLE results';
-          $sql_query2='TRUNCATE TABLE students';
+          $sql_query2='DELETE FROM students';
 
           if($conn->query($sql_query) === TRUE){
                 echo " result done";
@@ -25,7 +25,7 @@ SESSION_START();
                 echo " students done";
             }
             else {
-                echo "students not working";
+                echo " students not working";
             }
        
 
