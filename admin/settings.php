@@ -1,7 +1,13 @@
 <?php
+SESSION_START();
+
+ if($_SESSION['user_name'] ==""){
+     header('location: ./index.php');
+ }
+
+
+
     require_once('../database/connection.php');
-
-
 
 
      if(isset($_POST['resetok'])){
@@ -78,7 +84,7 @@
                 <a href="../index.php" class="navbar-brand">Yash classes</a>
             </div>
             <ul class="navbar-nav">
-            <a href="../index.php" type="button" class="btn btn-primary " >Log out</a>
+                <a href="./logout.php" class="btn btn-primary">Log out</a>
         </ul>
         </nav>
         <div class="container-fluid">

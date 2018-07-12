@@ -1,4 +1,11 @@
 <?php
+SESSION_START();
+
+ if($_SESSION['user_name'] ==""){
+     header('location: ./index.php');
+ }
+
+
 	require_once("../database/connection.php");
 
 
@@ -81,7 +88,7 @@
 			<a href="#" class="navbar-brand">Yash classes</a>
 		</div>
 		<ul class="navbar-nav">
-      		<a href="../index.php" type="button" class="btn btn-primary " >Log out</a>
+			<a href="./logout.php" class="btn btn-primary">Log out</a>
 		</ul>
 	</nav>
 	<div class="container-fluid">
@@ -181,7 +188,7 @@
     <!-- Footer Elements --
 <<p class="lead"> B-4, Chitrakoot society 2, Zadeshwar Road, Bharuch.</p>
     - Copyright -->
-    <div class="footer  py-3" align="right">Created by  
+    <div class="footer  py-3" align="right">Created by
       <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
       <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
 

@@ -1,4 +1,5 @@
 <?php
+SESSION_START();
 
     require_once('../database/connection.php');
 
@@ -17,11 +18,16 @@
         $pass = $select_row['password'];
 
 
+
         if($username == $user && $password == $pass)
         {
+            $_SESSION['user_name'] = $user ;
             header('location:./dashboard.php');
         }
-        echo "Invalid username or password.";
+        else {
+            echo "Invalid username or password.";
+        }
+
     }
  ?>
 
