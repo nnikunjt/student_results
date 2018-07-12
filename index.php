@@ -49,13 +49,10 @@
     </div>
 </div>
 
-<footer class="page-footer font-small unique-color-dark pt-4">
+<footer class="footer font-small unique-color-dark pt-4">
 
     <!-- Footer Elements -->
-
-
-      <div class="footer  py-3" align="right">Created by
-      <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+    <div >B-9, Chitrakoot society, Zadeshwar Chokdi,Bharuch</div>
 
     <div class="footer  py-3" align="right">Created by
       <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
