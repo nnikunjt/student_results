@@ -10,26 +10,30 @@ SESSION_START();
     require_once('../database/connection.php');
 
 
-     if(isset($_POST['resetok'])){
+    if(isset($_POST['resetok'])){
 
-         $sql_query='TRUNCATE TABLE results';
-          $sql_query2='DELETE FROM students';
+       $sql_query='TRUNCATE TABLE results';
+       // $sql_query2='TRUNCATE TABLE students';
 
-          if($conn->query($sql_query) === TRUE){
-                echo " result done";
-            }
-            else {
-                echo "result not working";
-            }
-            if($conn->query($sql_query2) === TRUE){
-                echo " students done";
-            }
-            else {
-                echo " students not working";
-            }
-       
+        if($conn->query($sql_query) === TRUE){
 
-        }
+              $auto="ALTER TABLE results AUTO_INCREMENT = 1";
+               if($conn->query($auto) === TRUE){
+                    echo "done";
+               }
+          }
+          else {
+              echo "result not working";
+          }
+      /*    if($conn->query($sql_query2) === TRUE){
+              echo " students done";
+          }
+          else {
+              echo "students not working";
+          } */
+
+
+      }
 
 
     if(isset($_POST['backup_students'])){
