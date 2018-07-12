@@ -6,7 +6,23 @@
 
      if(isset($_POST['resetok'])){
 
-            echo "button is working";
+         $sql_query='TRUNCATE TABLE results';
+          $sql_query2='TRUNCATE TABLE students';
+
+          if($conn->query($sql_query) === TRUE){
+                echo " result done";
+            }
+            else {
+                echo "result not working";
+            }
+            if($conn->query($sql_query2) === TRUE){
+                echo " students done";
+            }
+            else {
+                echo "students not working";
+            }
+       
+
         }
 
 
@@ -97,7 +113,8 @@
 
                                         <input type="submit" name="backup_students" value="Backup students Table" class="btn btn-primary"><pre>    </pre>
                                         <input type="submit" name="backup_results" value="Backup results Table" class="btn btn-primary"><pre>    </pre>
-                                        <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables</button>
+                                        <input type="submit" name="resetok" value="Reset tables" class="btn btn-primary"><pre>    </pre>
+                                       <!-- <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables</button>-->
 
 
                                     </div>
@@ -133,7 +150,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <input type="submit" name="resetok" value="OK" class="btn btn-primary" data-dismiss="modal" >
+        <button type="submit" class="btn btn-primary"  name="resetok" >Reset tables</button>
+
 
       </div>
     </div>
