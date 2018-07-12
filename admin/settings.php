@@ -10,26 +10,33 @@ SESSION_START();
     require_once('../database/connection.php');
 
 
-     if(isset($_POST['resetok'])){
+    if(isset($_POST['resetok'])){
 
-         $sql_query='TRUNCATE TABLE results';
-          $sql_query2='DELETE FROM students';
+       $reset_results='DELETE FROM results';
+       $reset_students='DELETE FROM students';
 
-          if($conn->query($sql_query) === TRUE){
-                echo " result done";
-            }
-            else {
-                echo "result not working";
-            }
-            if($conn->query($sql_query2) === TRUE){
-                echo " students done";
-            }
-            else {
-                echo " students not working";
-            }
-       
+       if($conn->query($reset_results) === TRUE){
+            $auto="ALTER TABLE results AUTO_INCREMENT = 1";
+            if($conn->query($auto) === TRUE){
+                    echo "done";
+               }
+           }
+          else {
+              echo "result not working";
+          }
 
-        }
+
+          if($conn->query($reset_students) === TRUE){
+              $auto="ALTER TABLE students AUTO_INCREMENT = 1";
+              if($conn->query($auto) === TRUE){
+                    echo "done";
+               }
+          }
+          else {
+              echo "students not working";
+          }
+
+     }
 
 
     if(isset($_POST['backup_students'])){
@@ -119,13 +126,13 @@ SESSION_START();
 
                                         <input type="submit" name="backup_students" value="Backup students Table" class="btn btn-primary"><pre>    </pre>
                                         <input type="submit" name="backup_results" value="Backup results Table" class="btn btn-primary"><pre>    </pre>
-                                        <input type="submit" name="resetok" value="Reset tables" class="btn btn-primary"><pre>    </pre>
-                                       <!-- <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables</button>-->
+                                <!--        <input type="submit" name="resetok" value="Reset tables" class="btn btn-primary"><pre>    </pre> -->
+                                        <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables</button>
 
 
                                     </div>
 
-                                    <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Apply">
+                                <!--    <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Apply"> -->
 
 
                                 </form>
@@ -156,7 +163,10 @@ SESSION_START();
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="submit" class="btn btn-primary"  name="resetok" >Reset tables</button>
+        <form class="" action="" method="post">
+            <input type="submit" name="resetok" value="Reset Tables" class="btn btn-primary">
+        </form>
+
 
 
       </div>
