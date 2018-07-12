@@ -20,7 +20,14 @@ SESSION_START();
 		$ss_to = $_POST['ss_to'];
 		$mess;
 
-          if ($math_to=="") {
+		if ($math_to="" && $science_to="" && $ss_to="") {
+
+             	echo "Please insert at list one Subject Result";
+          	}
+         else
+       	     { 	
+
+        	if ($math_to=="") {
        	       $math_to=0;
        	       $math=0;
              }
@@ -29,7 +36,7 @@ SESSION_START();
        	       $science_to=0;
        	       $science=0;
              }
-             if ($ss_to=="") {
+            if ($ss_to=="") {
        	       $ss_to=0;
        	       $sst=0;
              }
@@ -43,7 +50,7 @@ SESSION_START();
 		$insert_query = "INSERT INTO results(roll_no,test_date,math_obtain,sci_obtain,sst_obtain,math_total,sci_total,sst_total,percentage) VALUES('$roll_no','$test_date','$math','$science','$sst','$math_to','$science_to','$ss_to','$per')";
 
 		if($conn->query($insert_query) === TRUE){
-			$mess = "Your account has been created successfully !";
+			echo "student has been added successfully !";
 
 		}
 		else
@@ -51,9 +58,9 @@ SESSION_START();
 			$mess= "This student is not registered ";
 		}
 
-
-
 	}
+
+}
  ?>
 
 

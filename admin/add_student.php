@@ -41,7 +41,7 @@ SESSION_START();
                 //echo $roll_no;
                 $update_query="UPDATE students SET roll_no=$roll_no WHERE id=$id";
                 if ($conn->query($update_query) === TRUE) {
-                    echo "Your account has been created successfully !";
+                    echo "Student has been added successfully !";
                 }
                 else
                 {
@@ -156,6 +156,7 @@ SESSION_START();
 						                            <option>10</option>
                                                     <option>11</option>
                                                     <option>12</option>
+                                                    <option>Computer Science</option>
 						                        </select>
 						                    </div>
 						                    <label for="medium" class="col-sm-2 col-form-label">Medium</label>

@@ -67,6 +67,11 @@ SESSION_START();
                 }
     	    }
 
+
+
+           $backup_query= "SHOW TABLES";
+           $backup =mysqli_query($conn,$backup_query);
+          
 ?>
 
 
@@ -142,6 +147,18 @@ SESSION_START();
                 </div>
         </div>
         </div>
+
+<div class="container-fluid">
+    <h3>Letest Backup</h3>
+    <ul>
+        <?php while(mysqli_fetch_array($backup)){
+            echo "<td>".$backup."</td>";
+        } ?>
+    </ul>
+
+</div>
+
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
