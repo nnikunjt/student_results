@@ -88,8 +88,8 @@ SESSION_START();
                 </div></div>
     <div class="footer py-3 " style="background-color: transparent;" >
        <div align="right"> Created by
-                  <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
+                  <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
             </div>
         </div>
     
