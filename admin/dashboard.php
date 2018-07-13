@@ -32,8 +32,9 @@ SESSION_START();
             <div class="container-fluid">
                 <a href="../index.php" class="navbar-brand">Yash classes</a>
             </div>
-            <ul class="navbar-nav">
-            <a href="./logout.php" class="btn btn-primary">Log out</a>
+            
+            <ul class="navbar-nav" >
+            <a href="./logout.php" class="btn btn-primary" >Log out</a>
         </ul>
         </nav>
         <div class="container-fluid">
@@ -59,8 +60,8 @@ SESSION_START();
                     <div class="container-fluid">
                         <h1>Student details</h1>
                         <div class="table-responsive">
-                            <table class="table">
-                                <thead class="thead-light">
+                            <table class="table table-striped">
+                                <thead >
                                     <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Roll no.</th>
