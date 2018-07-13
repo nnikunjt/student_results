@@ -31,14 +31,14 @@
    	flex: 0 0 auto;
  	bottom:0px;
 
-	height: 40px;
+	height: 60px;
 	width: 100%;
  	padding-top: 2rem;
 
  }
  .footer a{
- 	margin-left: .5rem;
- 	margin-right: .5rem;
+ 	margin-left: .2rem;
+ 	margin-right: .1rem;
  }
 .footer span{
 	margin-left: 1rem;

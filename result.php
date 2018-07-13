@@ -68,7 +68,7 @@
             <div class="card">
                 <div class="card-body">
                     <form class="" action="" method="post">
-                        <div class="form-group row">
+                        <div class="form-group row" style="padding: .3rem;>
                             <label for="roll_no" class="col-sm-1 col-form-label">Roll no.</label>
                             <div class="col-sm-2">
                                 <input type="text" name="roll_no" class="form-control" value="" required>
@@ -169,6 +169,9 @@
 
         echo "</div>
             </div>
+            <div align='right'>
+        <input type='button' class='btn btn-outline-primary' name='downloadpdf' value='Download PDF'>
+    </div>
         </div>
     </div>
 </div>";
@@ -177,19 +180,22 @@
 }
 ?>
 
+
+
+
    <footer class="page-footer font-small unique-color-dark pt-4">
     <div class="footer  py-3">
-     
-            <div align="left">
+     <div class="row">
+                 <div class="col-sm-9">
              <span class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch. </span>
-                </div></div>
-    <div class="footer py-3 " style="background-color: transparent;" >
-       <div align="right"> Created by
+            </div>
+   
+       <div class="col-sm-3" align="right"> Develop by
                    <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
                   <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
             </div>
-        </div>
-    
+       </div>
+    </div>
   </footer>
 
 </body>
