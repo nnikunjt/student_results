@@ -2,7 +2,7 @@
 
     require_once('database/connection.php');
 
-    //$roll_no = $_GET['find'];
+   
  ?>
 
 

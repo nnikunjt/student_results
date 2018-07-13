@@ -20,11 +20,6 @@ SESSION_START();
 		$ss_to = $_POST['ss_to'];
 		$mess;
 
-		if ($math_to="" && $science_to="" && $ss_to="") {
-
-             	echo "Please insert at list one Subject Result";
-          	}
-         else
        	     { 	
 
         	if ($math_to=="") {
