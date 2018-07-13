@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2018 at 06:07 PM
+-- Generation Time: Jul 13, 2018 at 04:38 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -21,6 +21,189 @@ SET time_zone = "+00:00";
 --
 -- Database: `student_results`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `backup_results_13-jul-2018.5:23 pm`
+--
+
+CREATE TABLE `backup_results_13-jul-2018.5:23 pm` (
+  `id` int(255) NOT NULL DEFAULT '0',
+  `roll_no` int(255) NOT NULL,
+  `test_date` date NOT NULL,
+  `math_total` int(255) DEFAULT NULL,
+  `math_obtain` varchar(255) DEFAULT NULL,
+  `sci_total` int(255) DEFAULT NULL,
+  `sci_obtain` int(255) DEFAULT NULL,
+  `sst_total` int(255) DEFAULT NULL,
+  `sst_obtain` int(255) DEFAULT NULL,
+  `percentage` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `backup_results_13-jul-2018.5:23 pm`
+--
+
+INSERT INTO `backup_results_13-jul-2018.5:23 pm` (`id`, `roll_no`, `test_date`, `math_total`, `math_obtain`, `sci_total`, `sci_obtain`, `sst_total`, `sst_obtain`, `percentage`) VALUES
+(2, 181201, '2018-07-01', 50, '45', 0, 0, 0, 0, 90),
+(3, 181201, '2018-07-01', 50, '45', 0, 0, 0, 0, 90),
+(5, 181201, '2018-07-19', 0, '0', 0, 0, 0, 0, 0),
+(6, 181201, '2018-07-15', 0, '0', 0, 0, 0, 0, 0),
+(7, 181201, '2018-07-01', 0, '0', 0, 0, 0, 0, 0),
+(8, 181201, '2018-07-01', 0, '0', 0, 0, 0, 0, 0),
+(11, 181201, '2018-07-18', 0, '0', 0, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `backup_results_13-jul-2018.5:24 pm`
+--
+
+CREATE TABLE `backup_results_13-jul-2018.5:24 pm` (
+  `id` int(255) NOT NULL DEFAULT '0',
+  `roll_no` int(255) NOT NULL,
+  `test_date` date NOT NULL,
+  `math_total` int(255) DEFAULT NULL,
+  `math_obtain` varchar(255) DEFAULT NULL,
+  `sci_total` int(255) DEFAULT NULL,
+  `sci_obtain` int(255) DEFAULT NULL,
+  `sst_total` int(255) DEFAULT NULL,
+  `sst_obtain` int(255) DEFAULT NULL,
+  `percentage` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `backup_results_13-jul-2018.5:24 pm`
+--
+
+INSERT INTO `backup_results_13-jul-2018.5:24 pm` (`id`, `roll_no`, `test_date`, `math_total`, `math_obtain`, `sci_total`, `sci_obtain`, `sst_total`, `sst_obtain`, `percentage`) VALUES
+(2, 181201, '2018-07-01', 50, '45', 0, 0, 0, 0, 90),
+(3, 181201, '2018-07-01', 50, '45', 0, 0, 0, 0, 90),
+(5, 181201, '2018-07-19', 0, '0', 0, 0, 0, 0, 0),
+(6, 181201, '2018-07-15', 0, '0', 0, 0, 0, 0, 0),
+(7, 181201, '2018-07-01', 0, '0', 0, 0, 0, 0, 0),
+(8, 181201, '2018-07-01', 0, '0', 0, 0, 0, 0, 0),
+(11, 181201, '2018-07-18', 0, '0', 0, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `backup_results_13-jul-2018.5:25 pm`
+--
+
+CREATE TABLE `backup_results_13-jul-2018.5:25 pm` (
+  `id` int(255) NOT NULL DEFAULT '0',
+  `roll_no` int(255) NOT NULL,
+  `test_date` date NOT NULL,
+  `math_total` int(255) DEFAULT NULL,
+  `math_obtain` varchar(255) DEFAULT NULL,
+  `sci_total` int(255) DEFAULT NULL,
+  `sci_obtain` int(255) DEFAULT NULL,
+  `sst_total` int(255) DEFAULT NULL,
+  `sst_obtain` int(255) DEFAULT NULL,
+  `percentage` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `backup_results_13-jul-2018.5:25 pm`
+--
+
+INSERT INTO `backup_results_13-jul-2018.5:25 pm` (`id`, `roll_no`, `test_date`, `math_total`, `math_obtain`, `sci_total`, `sci_obtain`, `sst_total`, `sst_obtain`, `percentage`) VALUES
+(2, 181201, '2018-07-01', 50, '45', 0, 0, 0, 0, 90),
+(3, 181201, '2018-07-01', 50, '45', 0, 0, 0, 0, 90),
+(5, 181201, '2018-07-19', 0, '0', 0, 0, 0, 0, 0),
+(6, 181201, '2018-07-15', 0, '0', 0, 0, 0, 0, 0),
+(7, 181201, '2018-07-01', 0, '0', 0, 0, 0, 0, 0),
+(8, 181201, '2018-07-01', 0, '0', 0, 0, 0, 0, 0),
+(11, 181201, '2018-07-18', 0, '0', 0, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `backup_students_13-jul-2018.5:23 pm`
+--
+
+CREATE TABLE `backup_students_13-jul-2018.5:23 pm` (
+  `id` int(255) NOT NULL DEFAULT '0',
+  `roll_no` int(255) NOT NULL,
+  `student_name` varchar(255) NOT NULL,
+  `std` int(255) NOT NULL,
+  `medium` varchar(255) NOT NULL,
+  `birthdate` date NOT NULL,
+  `father_name` varchar(255) NOT NULL,
+  `father_no` varchar(15) NOT NULL,
+  `mother_name` varchar(255) NOT NULL,
+  `mother_no` varchar(15) NOT NULL,
+  `address` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `backup_students_13-jul-2018.5:23 pm`
+--
+
+INSERT INTO `backup_students_13-jul-2018.5:23 pm` (`id`, `roll_no`, `student_name`, `std`, `medium`, `birthdate`, `father_name`, `father_no`, `mother_name`, `mother_no`, `address`) VALUES
+(1, 181201, 'KISHAN SHAILESHBHAI KHANT', 12, 'Gujarati', '2018-07-29', 'SHAILESHBHAI', '2147483647', 'LAXMIBEN', '2147483647', 'BANK STREET AT PO ZADESHWAR  TA BHARUCH GUJARAT 392011'),
+(2, 180602, 'NIKUNJ NARESHBHAI THAKOR', 6, 'English(GSEB)', '2001-02-14', 'NARESHBHAI', '3543465', 'VARSHABEN', '111111', 'thfjyyuj'),
+(3, 180103, 'YASH DIPESH KHANT', 1, 'English(GSEB)', '2018-07-08', 'DIPESH', '9898127048', 'LAXMIBEN', '7567542234', 'BANK STREET AT PO ZADESHWAR  TA BHARUCH GUJARAT 392011');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `backup_students_13-jul-2018.5:24 pm`
+--
+
+CREATE TABLE `backup_students_13-jul-2018.5:24 pm` (
+  `id` int(255) NOT NULL DEFAULT '0',
+  `roll_no` int(255) NOT NULL,
+  `student_name` varchar(255) NOT NULL,
+  `std` int(255) NOT NULL,
+  `medium` varchar(255) NOT NULL,
+  `birthdate` date NOT NULL,
+  `father_name` varchar(255) NOT NULL,
+  `father_no` varchar(15) NOT NULL,
+  `mother_name` varchar(255) NOT NULL,
+  `mother_no` varchar(15) NOT NULL,
+  `address` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `backup_students_13-jul-2018.5:24 pm`
+--
+
+INSERT INTO `backup_students_13-jul-2018.5:24 pm` (`id`, `roll_no`, `student_name`, `std`, `medium`, `birthdate`, `father_name`, `father_no`, `mother_name`, `mother_no`, `address`) VALUES
+(1, 181201, 'KISHAN SHAILESHBHAI KHANT', 12, 'Gujarati', '2018-07-29', 'SHAILESHBHAI', '2147483647', 'LAXMIBEN', '2147483647', 'BANK STREET AT PO ZADESHWAR  TA BHARUCH GUJARAT 392011'),
+(2, 180602, 'NIKUNJ NARESHBHAI THAKOR', 6, 'English(GSEB)', '2001-02-14', 'NARESHBHAI', '3543465', 'VARSHABEN', '111111', 'thfjyyuj'),
+(3, 180103, 'YASH DIPESH KHANT', 1, 'English(GSEB)', '2018-07-08', 'DIPESH', '9898127048', 'LAXMIBEN', '7567542234', 'BANK STREET AT PO ZADESHWAR  TA BHARUCH GUJARAT 392011');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `backup_students_13-jul-2018.5:25 pm`
+--
+
+CREATE TABLE `backup_students_13-jul-2018.5:25 pm` (
+  `id` int(255) NOT NULL DEFAULT '0',
+  `roll_no` int(255) NOT NULL,
+  `student_name` varchar(255) NOT NULL,
+  `std` int(255) NOT NULL,
+  `medium` varchar(255) NOT NULL,
+  `birthdate` date NOT NULL,
+  `father_name` varchar(255) NOT NULL,
+  `father_no` varchar(15) NOT NULL,
+  `mother_name` varchar(255) NOT NULL,
+  `mother_no` varchar(15) NOT NULL,
+  `address` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `backup_students_13-jul-2018.5:25 pm`
+--
+
+INSERT INTO `backup_students_13-jul-2018.5:25 pm` (`id`, `roll_no`, `student_name`, `std`, `medium`, `birthdate`, `father_name`, `father_no`, `mother_name`, `mother_no`, `address`) VALUES
+(1, 181201, 'KISHAN SHAILESHBHAI KHANT', 12, 'Gujarati', '2018-07-29', 'SHAILESHBHAI', '2147483647', 'LAXMIBEN', '2147483647', 'BANK STREET AT PO ZADESHWAR  TA BHARUCH GUJARAT 392011'),
+(2, 180602, 'NIKUNJ NARESHBHAI THAKOR', 6, 'English(GSEB)', '2001-02-14', 'NARESHBHAI', '3543465', 'VARSHABEN', '111111', 'thfjyyuj'),
+(3, 180103, 'YASH DIPESH KHANT', 1, 'English(GSEB)', '2018-07-08', 'DIPESH', '9898127048', 'LAXMIBEN', '7567542234', 'BANK STREET AT PO ZADESHWAR  TA BHARUCH GUJARAT 392011');
 
 -- --------------------------------------------------------
 
@@ -46,13 +229,13 @@ CREATE TABLE `results` (
 --
 
 INSERT INTO `results` (`id`, `roll_no`, `test_date`, `math_total`, `math_obtain`, `sci_total`, `sci_obtain`, `sst_total`, `sst_obtain`, `percentage`) VALUES
-(8, 181211, '2018-07-07', 50, '50', 50, 49, 0, 0, 99),
-(9, 181012, '2018-07-25', 50, '45', 50, 10, 50, 5, 40),
-(11, 181211, '2018-07-03', 50, '20', 50, 22, 50, 15, 38),
-(12, 181211, '2018-07-14', 50, '20', 50, 25, 50, 47, 61.333333333333),
-(13, 181211, '2018-07-21', 50, '45', 50, 49, 50, 47, 94),
-(14, 181211, '2018-08-01', 50, '20', 50, 25, 60, 55, 62.5),
-(15, 181211, '2018-08-19', 50, '50', 0, 0, 0, 0, 100);
+(2, 181201, '2018-07-01', 50, '45', 0, 0, 0, 0, 90),
+(3, 181201, '2018-07-01', 50, '45', 0, 0, 0, 0, 90),
+(5, 181201, '2018-07-19', 0, '0', 0, 0, 0, 0, 0),
+(6, 181201, '2018-07-15', 0, '0', 0, 0, 0, 0, 0),
+(7, 181201, '2018-07-01', 0, '0', 0, 0, 0, 0, 0),
+(8, 181201, '2018-07-01', 0, '0', 0, 0, 0, 0, 0),
+(11, 181201, '2018-07-18', 0, '0', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -68,9 +251,9 @@ CREATE TABLE `students` (
   `medium` varchar(255) NOT NULL,
   `birthdate` date NOT NULL,
   `father_name` varchar(255) NOT NULL,
-  `father_no` int(255) NOT NULL,
+  `father_no` varchar(15) NOT NULL,
   `mother_name` varchar(255) NOT NULL,
-  `mother_no` int(255) NOT NULL,
+  `mother_no` varchar(15) NOT NULL,
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -79,12 +262,9 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `roll_no`, `student_name`, `std`, `medium`, `birthdate`, `father_name`, `father_no`, `mother_name`, `mother_no`, `address`) VALUES
-(1, 181211, 'Nikunj', 12, 'Gujarati', '2001-02-15', 'nareshbhai', 1212121212, 'varshaben', 2121212121, 'iyouououou'),
-(2, 181012, 'kishan', 10, 'Gujarati', '2000-07-26', 'shaileshbhai', 1414141414, 'xyz', 2147483647, 'y8ury9 tryirtyjh'),
-(3, 181213, 'Nikunj', 12, 'Gujarati', '2001-02-15', 'nareshbhai', 7676367, 'varshaben', 434343, 'greyhey'),
-(4, 18114, 'ghh', 1, 'Gujarati', '0000-00-00', 'ghfgh', 7676367, 'gfhfghhfg', 36534, 'gg'),
-(5, 180715, 'dhgg', 7, 'Gujarati', '2001-02-15', 'ghfgh', 7676367, 'fd', 0, 'rt'),
-(6, 181216, 'Upeksha', 12, 'Gujarati', '2003-01-14', 'nareshbhai', 7676367, 'varshaben', 36534, 'ffdfdffbzffdvsddvhfhfhgfhh');
+(1, 181201, 'KISHAN SHAILESHBHAI KHANT', 12, 'Gujarati', '2018-07-29', 'SHAILESHBHAI', '2147483647', 'LAXMIBEN', '2147483647', 'BANK STREET AT PO ZADESHWAR  TA BHARUCH GUJARAT 392011'),
+(2, 180602, 'NIKUNJ NARESHBHAI THAKOR', 6, 'English(GSEB)', '2001-02-14', 'NARESHBHAI', '3543465', 'VARSHABEN', '111111', 'thfjyyuj'),
+(3, 180103, 'YASH DIPESH KHANT', 1, 'English(GSEB)', '2018-07-08', 'DIPESH', '9898127048', 'LAXMIBEN', '7567542234', 'BANK STREET AT PO ZADESHWAR  TA BHARUCH GUJARAT 392011');
 
 -- --------------------------------------------------------
 
@@ -104,7 +284,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `user_name`, `password`) VALUES
 (1, 'nikunj', '123456'),
-(3, 'yash', 'yash');
+(3, 'yash', 'yash'),
+(4, 'kishan', 'kishan');
 
 --
 -- Indexes for dumped tables
@@ -138,19 +319,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `results`
 --
 ALTER TABLE `results`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
