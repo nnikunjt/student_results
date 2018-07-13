@@ -68,7 +68,8 @@ SESSION_START();
     	    }
 
 
-            $backup_students = mysqli_query( $conn, "SHOW TABLES LIKE 'backup_students_' " );
+            $backup_students = mysqli_query( $conn, "SHOW TABLES LIKE '%backup_students_%' ");
+            $backup_results = mysqli_query( $conn, "SHOW TABLES LIKE '%backup_results_%' ");
 
 
 ?>
@@ -144,22 +145,51 @@ SESSION_START();
                         </div>
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="table-responsive">
-                                    <div class="table">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th scope ="col">Tables name</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <?php
-                                                    while($res = mysqli_fetch_array($backup_students)){
-                                                        echo "<td>".$res[0]."<td>";
-                                                    }
-                                                 ?>
-                                            </tr>
-                                        </tbody>
+                                <div class="col-sm-6">
+                                    <h3>Students backup tables</h3>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" colspan="2">Tables name</th>
+                                                    <th scope="col">Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <?php
+                                                        while($res = mysqli_fetch_array($backup_students)){
+                                                            echo "<tr>";
+                                                            echo "<td>".$res[0]."<td>";
+                                                            echo "<td><a href='delete.php?delete=$res[0]' class='btn btn-danger'>X</a></td>";
+                                                            echo "</tr>";
+                                                            echo "</tr>";
+                                                        }
+                                                     ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h3>Results backup tables</h3>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" colspan="2">Tables name</th>
+                                                    <th scope="col">Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <?php
+                                                        while($res = mysqli_fetch_array($backup_results)){
+                                                            echo "<tr>";
+                                                            echo "<td>".$res[0]."<td>";
+                                                            echo "<td><a href='delete.php?delete=$res[0]' class='btn btn-danger'>X</a></td>";
+                                                            echo "</tr>";
+                                                        }
+                                                     ?>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>

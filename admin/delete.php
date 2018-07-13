@@ -17,4 +17,16 @@
         }
     }
 
+    if(isset($_GET['delete'])){
+        $table = $_GET['delete'];
+
+        $drop = "DROP TABLE `$table`";
+        if ($conn->query($drop) === TRUE) {
+            header('location:settings.php');
+        }
+        else {
+            echo "string";
+        }
+    }
+
 ?>
