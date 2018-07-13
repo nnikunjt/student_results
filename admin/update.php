@@ -97,6 +97,7 @@ SESSION_START();
                                 <a href="add_student.php" class="list-group-item">Add student</a>
                                 <a href="add_result.php" class="list-group-item">Add result</a>
                                 <a href="add_user.php" class="list-group-item">Add user</a>
+                                <a href="settings.php" class="list-group-item">Settings</a>
                             </ul>
                         </div>
 					</div>
@@ -198,12 +199,12 @@ SESSION_START();
     <div class="footer  py-3">
      
             <div align="left">
-             <span class="text-muted" >B-9, Chitrakoot Society, Zadeshwar Road,Bharuch.</span>
+             <span class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch.</span>
                 </div></div>
     <div class="footer py-3 " style="background-color: transparent;" >
        <div align="right"> Created by
-                  <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
+                   <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
             </div>
         </div>
     

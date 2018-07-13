@@ -41,7 +41,7 @@ SESSION_START();
                 //echo $roll_no;
                 $update_query="UPDATE students SET roll_no=$roll_no WHERE id=$id";
                 if ($conn->query($update_query) === TRUE) {
-                    echo "Your account has been created successfully !";
+                    echo "Student has been added successfully !";
                 }
                 else
                 {
@@ -157,6 +157,7 @@ SESSION_START();
 						                            <option>10</option>
                                                     <option>11</option>
                                                     <option>12</option>
+                                                    <option>Computer Science</option>
 						                        </select>
 						                    </div>
 						                    <label for="medium" class="col-sm-2 col-form-label">Medium</label>
@@ -210,12 +211,12 @@ SESSION_START();
     <div class="footer  py-3">
 
             <div align="left">
-             <span class="text-muted" >B-9, Chitrakoot Society, Zadeshwar Road,Bharuch.</span>
+             <span class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch.</span>
                 </div></div>
     <div class="footer py-3 " style="background-color: transparent;" >
        <div align="right"> Created by
-                  <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
+                   <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
             </div>
         </div>
 
