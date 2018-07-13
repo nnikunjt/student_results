@@ -68,10 +68,10 @@ SESSION_START();
     	    }
 
 
+            $backup_students = mysqli_query( $conn, "SHOW TABLES LIKE '%backup_students_%' ");
+            $backup_results = mysqli_query( $conn, "SHOW TABLES LIKE '%backup_results_%' ");
 
-           $backup_query= "SHOW TABLES";
-           $backup =mysqli_query($conn,$backup_query);
-          
+
 ?>
 
 
@@ -143,22 +143,61 @@ SESSION_START();
                                 </form>
                             </div>
                         </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3>Students backup tables</h3>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" colspan="2">Tables name</th>
+                                                    <th scope="col">Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <?php
+                                                        while($res = mysqli_fetch_array($backup_students)){
+                                                            echo "<tr>";
+                                                            echo "<td>".$res[0]."<td>";
+                                                            echo "<td><a href='delete.php?delete=$res[0]' class='btn btn-danger'>X</a></td>";
+                                                            echo "</tr>";
+                                                            echo "</tr>";
+                                                        }
+                                                     ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h3>Results backup tables</h3>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" colspan="2">Tables name</th>
+                                                    <th scope="col">Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <?php
+                                                        while($res = mysqli_fetch_array($backup_results)){
+                                                            echo "<tr>";
+                                                            echo "<td>".$res[0]."<td>";
+                                                            echo "<td><a href='delete.php?delete=$res[0]' class='btn btn-danger'>X</a></td>";
+                                                            echo "</tr>";
+                                                        }
+                                                     ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
         </div>
         </div>
-
-<div class="container-fluid">
-    <h3>Letest Backup</h3>
-    <ul>
-        <?php while(mysqli_fetch_array($backup)){
-            echo "<td>".$backup."</td>";
-        } ?>
-    </ul>
-
-</div>
-
-
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -196,17 +235,17 @@ SESSION_START();
 
    <footer class="page-footer font-small unique-color-dark pt-4">
     <div class="footer  py-3">
-     
+
             <div align="left">
-             <span class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch.</span>
+             <span class="text-muted" >B-9, Chitrakoot Society, Zadeshwar Road,Bharuch.</span>
                 </div></div>
     <div class="footer py-3 " style="background-color: transparent;" >
        <div align="right"> Created by
-                  <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
+                  <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
             </div>
         </div>
-    
+
   </footer>
 
 
