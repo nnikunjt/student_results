@@ -67,6 +67,10 @@ SESSION_START();
                 }
     	    }
 
+
+            $backup_students = mysqli_query( $conn, "SHOW TABLES LIKE 'backup_students_' " );
+
+
 ?>
 
 
@@ -138,6 +142,28 @@ SESSION_START();
                                 </form>
                             </div>
                         </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <div class="table">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th scope ="col">Tables name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <?php
+                                                    while($res = mysqli_fetch_array($backup_students)){
+                                                        echo "<td>".$res[0]."<td>";
+                                                    }
+                                                 ?>
+                                            </tr>
+                                        </tbody>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
         </div>
@@ -179,7 +205,7 @@ SESSION_START();
 
    <footer class="page-footer font-small unique-color-dark pt-4">
     <div class="footer  py-3">
-     
+
             <div align="left">
              <span class="text-muted" >B-9, Chitrakoot Society, Zadeshwar Road,Bharuch.</span>
                 </div></div>
@@ -189,7 +215,7 @@ SESSION_START();
                   <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
             </div>
         </div>
-    
+
   </footer>
 
 

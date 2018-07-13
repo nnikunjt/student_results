@@ -89,7 +89,8 @@ SESSION_START();
 			<a href="../index.php" class=" navbar-brand">Yash classes</a>
 		</div>
 		<ul class="navbar-nav">
-            <a href="./logout.php" class="btn btn-primary">Log out</a>
+            <!--<li class="nav-item"><label class="nav-link" style="color :#FFF"> <?php echo $_SESSION['user_name'];  ?></label></li>-->
+            <li class="nav-item"><a href="./logout.php" class="btn btn-primary">Log out</a></li>
 		</ul>
 	</nav>
 	<div class="container-fluid">
@@ -207,7 +208,7 @@ SESSION_START();
 
     <footer class="page-footer font-small unique-color-dark pt-4">
     <div class="footer  py-3">
-     
+
             <div align="left">
              <span class="text-muted" >B-9, Chitrakoot Society, Zadeshwar Road,Bharuch.</span>
                 </div></div>
@@ -217,7 +218,7 @@ SESSION_START();
                   <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
             </div>
         </div>
-    
+
   </footer>
 </body>
 </html>
