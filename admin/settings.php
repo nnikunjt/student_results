@@ -159,7 +159,7 @@ SESSION_START();
                                                     <?php
                                                         while($res = mysqli_fetch_array($backup_students)){
                                                             echo "<tr>";
-                                                            echo "<td>".$res[0]."<td>";
+                                                            echo "<td><a href='excel.php?xls=$res[0]' class='nav-link text-dark'>".$res[0]."</a><td>";
                                                             echo "<td><a href='delete.php?delete=$res[0]' class='btn btn-danger'>X</a></td>";
                                                             echo "</tr>";
                                                             echo "</tr>";
@@ -183,7 +183,7 @@ SESSION_START();
                                                     <?php
                                                         while($res = mysqli_fetch_array($backup_results)){
                                                             echo "<tr>";
-                                                            echo "<td>".$res[0]."<td>";
+                                                            echo "<td><a href='excel.php?excel=$res[0]' class='nav-link text-dark'>".$res[0]."</a><td>";
                                                             echo "<td><a href='delete.php?delete=$res[0]' class='btn btn-danger'>X</a></td>";
                                                             echo "</tr>";
                                                         }
