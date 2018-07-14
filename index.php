@@ -149,7 +149,16 @@
                     echo "<div class='row'>
                     <label class='col-sm-2 col-form-label'>Percentage :</label>
                     <div class='col-sm-4'>";
-                        echo $select_row['percentage'];
+                        echo "<b>".$select_row['percentage']." %</b>";
+                        if ($select_row['percentage']<35) {
+                          echo "<br><br><label style='color: red ;'>Need Improvment</label> ";
+                        }
+                        elseif ($select_row['percentage']<80) {
+                          echo "<br><br><label style='color:  #ff8000 ;'>Better luck next time</label> ";
+                        }
+                        else{
+                          echo "<br><br><label style='color: green ;'>Weldone</label> ";
+                        }
                     echo "</div>
                         </div>";
 
@@ -166,7 +175,7 @@
 
 }
 ?>
-
+<label style="color: red ;"></label>
 
 
 
