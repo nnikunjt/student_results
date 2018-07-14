@@ -53,40 +53,42 @@ SESSION_START();
         </ul>
         </nav>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="container">
                     <div class="card">
                         <div class="card-header">
                             Links
                         </div>
                         <div class="card-body">
                             <ul class="list-group">
-                                <a href="dashboard.php" class="list-group-item ">Dashboard</a>
-                                <a href="add_student.php" class="list-group-item">Add student</a>
+                                <a href="dashboard.php" class="list-group-item">Dashboard</a>
+                                <a href="add_student.php" class="list-group-item disabled">Add student</a>
                                 <a href="add_result.php" class="list-group-item">Add result</a>
-                                <a href="" class="list-group-item disabled">Add user</a>
+                                <a href="add_user.php" class="list-group-item">Add user</a>
                                 <a href="settings.php" class="list-group-item">Settings</a>
 
                             </ul>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-9">
+                <div class="col-md-5">
                     <div class="container-fluid">
                         <h1>Add User</h1>
                         <div class="card">
                             <div class="card-body">
                                 <form class="" action="" method="post">
                                     <div class="form-group row">
-                                        <label for="username" class="col-sm-2 col-form-label">User name</label>
-                                        <div class="col-sm-10">
+                                        <label for="username" class="col-sm-3 col-form-label">User name</label>
+                                        <div class="col-sm-9">
                                             <input type="text" class="form-control" name="username" value="" autofocus required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="password" class="col-sm-2 col-form-label">Password</label>
-                                        <div class="col-sm-10">
+                                        <label for="password" class="col-sm-3 col-form-label">Password</label>
+                                        <div class="col-sm-9">
                                             <input type="password" class="form-control" name="password" value="" required>
                                         </div>
                                     </div>

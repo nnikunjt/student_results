@@ -20,11 +20,6 @@ SESSION_START();
 		$ss_to = $_POST['ss_to'];
 		$mess;
 
-		if ($math_to="" && $science_to="" && $ss_to="") {
-
-             	echo "Please insert at list one Subject Result";
-          	}
-         else
        	     { 	
 
         	if ($math_to=="") {
@@ -192,18 +187,19 @@ SESSION_START();
 <!-- Footer -->
    <footer class="page-footer font-small unique-color-dark pt-4">
     <div class="footer  py-3">
-     
-            <div align="left">
-             <span class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch.</span>
-                </div></div>
-    <div class="footer py-3 " style="background-color: transparent;" >
-       <div align="right"> Created by
+     <div class="row">
+                 <div class="col-sm-9">
+             <span class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch. </span>
+            </div>
+   
+       <div class="col-sm-3" align="right"> Develop by
                    <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
                   <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
             </div>
-        </div>
-    
+       </div>
+    </div>
   </footer>
+
 
 
 </body>

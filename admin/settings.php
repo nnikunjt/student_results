@@ -100,25 +100,26 @@ SESSION_START();
         </ul>
         </nav>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="container">
                     <div class="card">
                         <div class="card-header">
                             Links
                         </div>
                         <div class="card-body">
                             <ul class="list-group">
-                                <a href="dashboard.php" class="list-group-item ">Dashboard</a>
-                                <a href="add_student.php" class="list-group-item">Add student</a>
+                                <a href="dashboard.php" class="list-group-item">Dashboard</a>
+                                <a href="add_student.php" class="list-group-item ">Add student</a>
                                 <a href="add_result.php" class="list-group-item">Add result</a>
-                                <a href="add_user.php" class="list-group-item ">Add user</a>
+                                <a href="add_user.php" class="list-group-item">Add user</a>
                                 <a href="settings.php" class="list-group-item disabled">Settings</a>
 
                             </ul>
                         </div>
                     </div>
                 </div>
-
+            </div>
                 <div class="col-md-9">
                     <div class="container-fluid">
                         <h1>Settings</h1>
