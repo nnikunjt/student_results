@@ -21,7 +21,6 @@
   <link href="css/style.css" rel="stylesheet">
   <script src="js/jspdf.js"></script>
   <script src="js/jquery-2.1.3.js"></script>
-   <script src="js/pdfFromHTML.js"></script>
   <style media="screen">
         .col-sm-4{
             padding-top: .4rem;
@@ -69,31 +68,30 @@
 
 
 <?php
-
+  $none="1";
     // showing results
     if (isset($_GET['roll_no'])) {
         $roll_no = $_GET['roll_no'];
 
-
-
         $select_query = "SELECT * FROM students INNER JOIN results ON students.roll_no = results.roll_no WHERE students.roll_no = $roll_no AND results.test_date = (SELECT MAX(test_date) FROM results WHERE roll_no = $roll_no)";
         $select_run = mysqli_query($conn, $select_query);
         $select_row = mysqli_fetch_array($select_run);
+
+        $pdfname= $roll_no."_".$select_row['test_date'];
 
     echo "<div id='HTMLtoPDF'>
           <div class='container'>
             <div class='row'>
                 <div class='col-md-10'>
                     <div class='card'>
-                        <div class='card-header'>
+                        <div class='card-header' >
                         Result
                     </div>
                     <div class='card-body'>
                     <div class='row'>
                     <form a ></form>
-
                         <label class='col-sm-2 col-form-label'>Name :</label>
-                        <div class='col-sm-4'>" ;
+                        <div class='col-sm-4' >" ;
                             echo $select_row['student_name'];
                   echo "</div>
                     </div>
@@ -156,34 +154,72 @@
         echo "</div>
             </div>
             <div align='right'>
-                <a href='#'' onclick='HTMLtoPDF()' class='btn btn-outline-primary'>Download PDF</a>
-    </div>
+                <a href='#' onclick='HTMLtoPDF()' class='btn btn-outline-primary'>Download As PDF</a>
+
+            </div>
         </div>
     </div>
 </div>
-</div>";
+</div>
+<br><br><br><br><br>";
 
 
 }
+
+
+
+
 ?>
 
 
-
-
-   <footer class="page-footer font-small unique-color-dark pt-4">
-    <div class="footer  py-3">
-     <div class="row">
-                 <div class="col-sm-9">
-             <span class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch. </span>
-            </div>
-   
-       <div class="col-sm-3" align="right"> Develop by
-                   <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
-            </div>
-       </div>
-    </div>
-  </footer>
+ <footer class="footer">
+ <div class="container-fluid paddind">
+    <div class="row ">
+        
+        <div class="col-md-4">          
+           <p class="text-muted" >B-4, Chitrakoot Society - 2, Opp. Tulsidham Market, Zadeshwar Road, Bharuch.<br>
+             Dipesh sir Mo. 96381 92399 </p>
+           
+        </div>
+        <div class="col-md-8" align="right">
+            <p> Develop by
+            <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a></p>
+        </div>      
+</footer>
 
 </body>
 </html>
+
+
+<script type="text/javascript">
+    
+    function HTMLtoPDF(){
+var pdf = new jsPDF('p', 'pt', 'letter');
+source = $('#HTMLtoPDF')[0];
+specialElementHandlers = {
+    '#bypassme': function(element, renderer){
+        return true
+    }
+}
+margins = {
+    top: 50,
+    left: 60,
+    width: 545
+  };
+pdf.fromHTML(
+    source // HTML string or DOM elem ref.
+    , margins.left // x coord
+    , margins.top // y coord
+    , {
+        'width': margins.width // max width of content on PDF
+        , 'elementHandlers': specialElementHandlers
+    },
+    function (dispose) {
+      // dispose: object with X, Y of the last line add to the PDF
+      //          this allow the insertion of new lines after html
+        pdf.save('<?php echo $pdfname; ?>.pdf');
+      }
+  )     
+}
+</script>

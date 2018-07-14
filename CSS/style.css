@@ -22,6 +22,14 @@
 	margin-bottom: .6rem;
 }
 
+.table td{
+	text-align: center;
+}
+.table tr{
+		text-align: center;
+}
+
+
 .footer{
  	background-color: #F5FFFA;
  	color: #808080;
@@ -31,7 +39,7 @@
    	flex: 0 0 auto;
  	bottom:0px;
 
-	height: 40px;
+	
 	width: 100%;
  	padding-top: 2rem;
 

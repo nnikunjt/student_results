@@ -210,12 +210,9 @@ SESSION_START();
         </button>
       </div>
       <div class="modal-body">
-        First, Do this you have to Make your backup. If you Don't have made back up, make it.
-        <br>
-        If you click ok' then you lose all saved data from your tables<br>
-        result, students<br>
-
-        Did you really want to do that?<br>
+       Please take backup of your tables before resetting them. <br>
+        
+        Do you really want to do this?<br>
 
       </div>
       <div class="modal-footer">
@@ -234,21 +231,21 @@ SESSION_START();
 
 
 
-   <footer class="page-footer font-small unique-color-dark pt-4">
-    <div class="footer  py-3">
-
-            <div align="left">
-             <span class="text-muted" >B-9, Chitrakoot Society, Zadeshwar Road,Bharuch.</span>
-                </div></div>
-    <div class="footer py-3 " style="background-color: transparent;" >
-       <div align="right"> Created by
-                  <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
-            </div>
+ <footer class="footer">
+ <div class="container-fluid paddind">
+    <div class="row ">
+        
+        <div class="col-md-4">          
+           <p class="text-muted" >B-4, Chitrakoot Society - 2, Opp. Tulsidham Market, Zadeshwar Road, Bharuch.<br>
+             Dipesh sir Mo. 96381 92399 </p>
+           
         </div>
-
-  </footer>
-
+        <div class="col-md-8" align="right">
+            <p> Develop by
+            <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a></p>
+        </div>      
+</footer>
 
 </body>
 </html>

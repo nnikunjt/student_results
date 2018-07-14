@@ -34,7 +34,7 @@ SESSION_START();
 
 		if($conn->query($insert_query) === TRUE)
             {
-                echo "Your account has been created successfully !";
+                //echo "Your account has been created successfully !";
                 $id = $conn->insert_id;
                 if ($id<10) {
                 	$id = "0".$id;
@@ -221,11 +221,11 @@ SESSION_START();
 
  <footer class="footer">
  <div class="container-fluid paddind">
-    <div class="row text-center">
+    <div class="row ">
         
         <div class="col-md-4">          
-           <p class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch.</p>
-            <p> Dipesh sir Mo. 9812345678 </p>
+           <p class="text-muted" >B-4, Chitrakoot Society - 2, Opp. Tulsidham Market, Zadeshwar Road, Bharuch.<br>
+             Dipesh sir Mo. 96381 92399 </p>
            
         </div>
         <div class="col-md-8" align="right">
