@@ -16,6 +16,7 @@ SESSION_START();
 		$birthdate = $_POST['birthdate'];
 		$std = $_POST['std'];
 		$medium = $_POST['medium'];
+		$school=$_POST['school'];
 		$f_name = $_POST['father_name'];
 		$m_name = $_POST['mother_name'];
 		$father_no = $_POST['father_no'];
@@ -26,13 +27,14 @@ SESSION_START();
 		$m_name=strtoupper($m_name);
         $year = date('Y');
         $year = substr($year,2,3);
+        $school=strtoupper($school);
 
-		$insert_query ="INSERT INTO students(student_name,std,medium,birthdate,father_name,father_no,mother_name,mother_no,address
-		) VALUES('$name','$std','$medium','$birthdate','$f_name','$father_no','$m_name','$mother_no','$address')";
+		$insert_query ="INSERT INTO students(student_name,std,medium,birthdate,school,father_name,father_no,mother_name,mother_no,address
+		) VALUES('$name','$std','$medium','$birthdate','$school','$f_name','$father_no','$m_name','$mother_no','$address')";
 
 		if($conn->query($insert_query) === TRUE)
             {
-                //echo "Your account has been created successfully !";
+                echo "Your account has been created successfully !";
                 $id = $conn->insert_id;
                 if ($id<10) {
                 	$id = "0".$id;
@@ -171,6 +173,14 @@ SESSION_START();
 						                        </select>
 						                    </div>
 						                </div>
+						                <div class="form-group row">
+						                	<label for="school" class="col-sm-2 col-form-label">
+						                		School	Name</label>
+						                		<div class="col-sm-10">
+						                			<input type="text" name="school" class=" form-control"  required style='text-transform:uppercase'>
+						                		</div>
+						                		
+						                </div>
 										<div class="form-group row">
 						                    <label for="father_name"  class="col-sm-2 col-form-label">Father name</label>
 						                    <div class="col-sm-5">
@@ -197,7 +207,7 @@ SESSION_START();
 						                        <textarea name="address" rows="4" class="form-control" required style='text-transform:uppercase'></textarea>
 						                    </div>
 						                </div>
-						                <center><input type="submit" name="submit" value="Add student" class="btn btn-outline-primary btn-lg"></center>
+						                <center><input type="submit" name="submit" value="Add student" class="btn btn-outline-primary btn-lg"></center><br><br><br><br><br>
 						            </form>
 						        </div>
 						    </div>
@@ -209,19 +219,21 @@ SESSION_START();
 	</div><br><br>
 
 
-    <footer class="page-footer font-small unique-color-dark pt-4">
-    <div class="footer  py-3">
-
-            <div align="left">
-             <span class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch.</span>
-                </div></div>
-    <div class="footer py-3 " style="background-color: transparent;" >
-       <div align="right"> Created by
-                   <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
-            </div>
+ <footer class="footer">
+ <div class="container-fluid paddind">
+    <div class="row text-center">
+        
+        <div class="col-md-4">          
+           <p class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch.</p>
+            <p> Dipesh sir Mo. 9812345678 </p>
+           
         </div>
+        <div class="col-md-8" align="right">
+            <p> Develop by
+            <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a></p>
+        </div>      
+</footer>
 
-  </footer>
 </body>
 </html>

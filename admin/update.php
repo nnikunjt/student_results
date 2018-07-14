@@ -26,6 +26,7 @@ SESSION_START();
         $lname = $_POST['l_name'];
         $name =$fname." ".$mname." ".$lname;
 		$birthdate = $_POST['birthdate'];
+		$school=$_POST['school'];
 		$std = $_POST['std'];
 		$medium = $_POST['medium'];
 		$f_name = $_POST['father_name'];
@@ -33,9 +34,12 @@ SESSION_START();
 		$father_no = $_POST['father_no'];
 		$mother_no = $_POST['mother_no'];
 		$address = $_POST['address'];
+		$name = strtoupper($name);
+		$f_name=strtoupper($f_name);
+		$m_name=strtoupper($m_name);
+        $school=strtoupper($school);
 
-
-		$update_query ="UPDATE students SET student_name ='$name', std ='$std', medium='$medium', birthdate='$birthdate', father_name ='$f_name', father_no='$father_no',mother_no='$mother_no',mother_name='$m_name', address='$address' WHERE roll_no=$roll_no";
+		$update_query ="UPDATE students SET student_name ='$name', std ='$std', medium='$medium', birthdate='$birthdate',school='$school', father_name ='$f_name', father_no='$father_no',mother_no='$mother_no',mother_name='$m_name', address='$address' WHERE roll_no=$roll_no";
 
 		if($conn->query($update_query) === TRUE)
             {
@@ -156,6 +160,14 @@ SESSION_START();
 						                            <option <?php if($res['medium'] == 'English(CBSC)'){ echo "selected";} ?> >English(CBSC)</option>
 						                        </select>
 						                    </div>
+						                </div>
+						                <div class="form-group row">
+						                	<label for="school" class="col-sm-2 col-form-label">
+						                		School	Name</label>
+						                		<div class="col-sm-10">
+						                			<input type="text" name="school" class=" form-control"  required style='text-transform:uppercase' value="<?php  echo $res['school']; ?>">
+						                		</div>
+						                		
 						                </div>
 										<div class="form-group row">
 						                    <label for="father_name"  class="col-sm-2 col-form-label">Father name</label>
