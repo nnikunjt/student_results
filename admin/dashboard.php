@@ -26,6 +26,11 @@ SESSION_START();
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     	<link href="../css/style.css" rel="stylesheet">
+        <style type="text/css">
+            h1 {
+                margin-top: 1rem;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-dark navbar-expand-md bg-dark">
