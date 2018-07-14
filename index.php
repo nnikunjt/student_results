@@ -19,6 +19,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link href="css/style.css" rel="stylesheet">
+  <script src="js/jspdf.js"></script>
+  <script src="js/jquery-2.1.3.js"></script>
+   <script src="js/pdfFromHTML.js"></script>
   <style media="screen">
         .col-sm-4{
             padding-top: .4rem;
@@ -77,7 +80,8 @@
         $select_run = mysqli_query($conn, $select_query);
         $select_row = mysqli_fetch_array($select_run);
 
-    echo "<div class='container'>
+    echo "<div id='HTMLtoPDF'>
+          <div class='container'>
             <div class='row'>
                 <div class='col-md-10'>
                     <div class='card'>
@@ -152,10 +156,11 @@
         echo "</div>
             </div>
             <div align='right'>
-                <a href='https://pdfcrowd.com/url_to_pdf/' class='btn btn-outline-primary'>Download PDF</a>
+                <a href='#'' onclick='HTMLtoPDF()' class='btn btn-outline-primary'>Download PDF</a>
     </div>
         </div>
     </div>
+</div>
 </div>";
 
 

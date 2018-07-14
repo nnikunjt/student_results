@@ -93,14 +93,15 @@ SESSION_START();
             <li class="nav-item"><a href="./logout.php" class="btn btn-primary">Log out</a></li>
 		</ul>
 	</nav>
+
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-3">
-				<div class="container">
-					<div class="card">
-						<div class="card-header">
-							Links
-						</div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header">
+                            Links
+                        </div>
                         <div class="card-body">
                             <ul class="list-group">
                                 <a href="dashboard.php" class="list-group-item">Dashboard</a>
@@ -111,9 +112,10 @@ SESSION_START();
 
                             </ul>
                         </div>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+            </div>
+	                    
 			<div class="col-md-9">
 				<div class="container">
 					<div class="row">
