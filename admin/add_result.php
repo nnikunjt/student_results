@@ -22,16 +22,16 @@ SESSION_START();
 
        	     { 	
 
-        	if ($math_to=="") {
+        	if ($math_to=="" && $math=="") {
        	       $math_to=0;
        	       $math=0;
              }
 
-        	if ($science_to=="") {
+        	if ($science_to=="" && $science=="") {
        	       $science_to=0;
        	       $science=0;
              }
-            if ($ss_to=="") {
+            if ($ss_to=="" && $sst=="") {
        	       $ss_to=0;
        	       $sst=0;
              }
@@ -87,7 +87,7 @@ SESSION_START();
 
 	<nav class="navbar navbar-dark navbar-expand-md bg-dark">
 		<div class="container-fluid">
-			<a href="#" class="navbar-brand">Yash classes</a>
+			<a href="../index.php" class="navbar-brand">Yash classes</a>
 		</div>
 		<ul class="navbar-nav">
 			<a href="./logout.php" class="btn btn-primary">Log out</a>
