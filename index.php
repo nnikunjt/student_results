@@ -68,7 +68,7 @@
 
 
 <?php
-  $none="1";
+
     // showing results
     if (isset($_GET['roll_no'])) {
         $roll_no = $_GET['roll_no'];
@@ -89,7 +89,7 @@
                     </div>
                     <div class='card-body'>
                     <div class='row'>
-                    <form a ></form>
+                    <form method='GET' ></form>
                         <label class='col-sm-2 col-form-label'>Name :</label>
                         <div class='col-sm-4' >" ;
                             echo $select_row['student_name'];
@@ -163,28 +163,18 @@
         echo "</div>
             </div>
             <div align='right'>
-                <a href='#' onclick='HTMLtoPDF()' class='btn btn-outline-primary'>Download As PDF</a>
+                <a href='test.php?roll_no=$_GET[roll_no]'  class='btn btn-outline-primary'>Download As PDF</a>
 
             </div>
         </div>
     </div>
 </div>
 </div>
-<br><br><br><br><br>";
+<br><br><br><br><br><br><br><br><br>";
 
 
 }
-<<<<<<< HEAD
-
-=======
 ?>
-<label style="color: red ;"></label>
->>>>>>> 46eb34db41a3c12342e64ac91758e5c25d2b6eee
-
-
-
-?>
-
 
  <footer class="footer">
  <div class="container-fluid paddind">
