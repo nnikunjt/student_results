@@ -39,13 +39,14 @@ SESSION_START();
 
 
 		$per = (($math+$science+$sst)*100)/($math_to+$science_to+$ss_to);
+		$percentage = number_format($per,2);
 
 
 
-		$insert_query = "INSERT INTO results(roll_no,test_date,math_obtain,sci_obtain,sst_obtain,math_total,sci_total,sst_total,percentage) VALUES('$roll_no','$test_date','$math','$science','$sst','$math_to','$science_to','$ss_to','$per')";
+		$insert_query = "INSERT INTO results(roll_no,test_date,math_obtain,sci_obtain,sst_obtain,math_total,sci_total,sst_total,percentage) VALUES('$roll_no','$test_date','$math','$science','$sst','$math_to','$science_to','$ss_to','$percentage')";
 
 		if($conn->query($insert_query) === TRUE){
-			echo "student has been added successfully !";
+			echo "result has been added successfully !";
 
 		}
 		else
@@ -185,21 +186,20 @@ SESSION_START();
 
 
 <!-- Footer -->
- <footer class="footer">
- <div class="container-fluid paddind">
-    <div class="row ">
-        
-        <div class="col-md-4">          
-           <p class="text-muted" >B-4, Chitrakoot Society - 2, Opp. Tulsidham Market, Zadeshwar Road, Bharuch.<br>
-             Dipesh sir Mo. 96381 92399 </p>
-           
-        </div>
-        <div class="col-md-8" align="right">
-            <p> Develop by
-            <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a></p>
-        </div>      
-</footer>
+   <footer class="page-footer font-small unique-color-dark pt-4">
+    <div class="footer  py-3">
+     <div class="row">
+                 <div class="col-sm-9">
+             <span class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch. </span>
+            </div>
+   
+       <div class="col-sm-3" align="right"> Develop by
+                   <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
+            </div>
+       </div>
+    </div>
+  </footer>
 
 
 

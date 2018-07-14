@@ -16,7 +16,7 @@ SESSION_START();
 		$birthdate = $_POST['birthdate'];
 		$std = $_POST['std'];
 		$medium = $_POST['medium'];
-		$school=$_POST['school'];
+		$school= $_POST['school'];
 		$f_name = $_POST['father_name'];
 		$m_name = $_POST['mother_name'];
 		$father_no = $_POST['father_no'];
@@ -91,7 +91,7 @@ SESSION_START();
 			<a href="../index.php" class=" navbar-brand">Yash classes</a>
 		</div>
 		<ul class="navbar-nav">
-            <!--<li class="nav-item"><label class="nav-link" style="color :#FFF"> <?php echo $_SESSION['user_name'];  ?></label></li>-->
+            <!--<li class="nav-item"><label class="nav-link" style="color :#FFF"></label></li>-->
             <li class="nav-item"><a href="./logout.php" class="btn btn-primary">Log out</a></li>
 		</ul>
 	</nav>
@@ -174,8 +174,7 @@ SESSION_START();
 						                    </div>
 						                </div>
 						                <div class="form-group row">
-						                	<label for="school" class="col-sm-2 col-form-label">
-						                		School	Name</label>
+						                	<label for="school" class="col-sm-2 col-form-label">School	Name</label>
 						                		<div class="col-sm-10">
 						                			<input type="text" name="school" class=" form-control"  required style='text-transform:uppercase'>
 						                		</div>
@@ -207,7 +206,7 @@ SESSION_START();
 						                        <textarea name="address" rows="4" class="form-control" required style='text-transform:uppercase'></textarea>
 						                    </div>
 						                </div>
-						                <center><input type="submit" name="submit" value="Add student" class="btn btn-outline-primary btn-lg"></center><br><br><br><br><br>
+						                <center><input type="submit" name="submit" value="Add student" class="btn btn-outline-primary btn-lg"></center><br><br><br>
 						            </form>
 						        </div>
 						    </div>
@@ -216,7 +215,7 @@ SESSION_START();
 				</div>
 			</div>
 		</div>
-	</div><br><br>
+	</div>
 
 
  <footer class="footer">

@@ -174,12 +174,7 @@
 
 
 }
-<<<<<<< HEAD
 
-=======
-?>
-<label style="color: red ;"></label>
->>>>>>> 46eb34db41a3c12342e64ac91758e5c25d2b6eee
 
 
 

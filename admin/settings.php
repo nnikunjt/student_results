@@ -51,7 +51,7 @@ SESSION_START();
             else {
                 echo "not working";
             }
-	    }
+        }
 
         if(isset($_POST['backup_results'])){
                 date_default_timezone_set('Asia/Kolkata');
@@ -65,7 +65,7 @@ SESSION_START();
                 else {
                     echo "not working";
                 }
-    	    }
+            }
 
 
             $backup_students = mysqli_query( $conn, "SHOW TABLES LIKE '%backup_students_%' ");
@@ -81,14 +81,19 @@ SESSION_START();
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<title>Admin</title>
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    	<link href="../css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Admin</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <link href="../css/style.css" rel="stylesheet">
+        <style type="text/css">
+            h1{
+                margin-top: 1rem;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-dark navbar-expand-md bg-dark">
@@ -134,7 +139,6 @@ SESSION_START();
                                         <input type="submit" name="backup_results" value="Backup results Table" class="btn btn-primary"><pre>    </pre>
                                 <!--        <input type="submit" name="resetok" value="Reset tables" class="btn btn-primary"><pre>    </pre> -->
                                         <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables</button>
-
 
                                     </div>
 
@@ -210,9 +214,12 @@ SESSION_START();
         </button>
       </div>
       <div class="modal-body">
-       Please take backup of your tables before resetting them. <br>
-        
-        Do you really want to do this?<br>
+        First, Do this you have to Make your backup. If you Don't have made back up, make it.
+        <br>
+        If you click ok' then you lose all saved data from your tables<br>
+        result, students<br>
+
+        Did you really want to do that?<br>
 
       </div>
       <div class="modal-footer">
@@ -231,21 +238,21 @@ SESSION_START();
 
 
 
- <footer class="footer">
- <div class="container-fluid paddind">
-    <div class="row ">
-        
-        <div class="col-md-4">          
-           <p class="text-muted" >B-4, Chitrakoot Society - 2, Opp. Tulsidham Market, Zadeshwar Road, Bharuch.<br>
-             Dipesh sir Mo. 96381 92399 </p>
-           
+   <footer class="page-footer font-small unique-color-dark pt-4">
+    <div class="footer  py-3">
+
+            <div align="left">
+             <span class="text-muted" >B-9, Chitrakoot Society, Zadeshwar Road,Bharuch.</span>
+                </div></div>
+    <div class="footer py-3 " style="background-color: transparent;" >
+       <div align="right"> Created by
+                  <a href="https://plus.google.com/103929880037258813858">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138"> Kishan</a>
+            </div>
         </div>
-        <div class="col-md-8" align="right">
-            <p> Develop by
-            <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a></p>
-        </div>      
-</footer>
+
+  </footer>
+
 
 </body>
 </html>
