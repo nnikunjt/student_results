@@ -49,4 +49,44 @@
 
 	}
 
+	if(isset($_GET['excel'])){
+		$excel = $_GET['excel'];
+		$select_query = "SELECT * FROM `$excel` ";
+		$select_run = mysqli_query($conn,$select_query);
+
+		$output .= '
+			<table class="table" border="1">
+				<tr>
+					<th>id</th>
+					<th>roll_no</th>
+					<th>test_date</th>
+					<th>math_total</th>
+					<th>math_obtain</th>
+					<th>sci_total</th>
+					<th>sci_obtain</th>
+					<th>sst_total</th>
+					<th>sst_obtain</th>
+				</tr>';
+
+			while ($res = mysqli_fetch_array($select_run)) {
+				$output .= '<tr>
+								<td>'.$res['id'].'</td>
+								<td>'.$res['roll_no'].'</td>
+								<td>'.$res['test_date'].'</td>
+								<td>'.$res['math_total'].'</td>
+								<td>'.$res['math_obtain'].'</td>
+								<td>'.$res['sci_total'].'</td>
+								<td>'.$res['sci_obtain'].'</td>
+								<td>'.$res['sst_total'].'</td>
+								<td>'.$res['sst_obtain'].'</td>';
+			}
+			$output .='</table>';
+			
+			header("Content-Type: application/xls");
+			header("Content-Disposition:attachment; filename='$excel.xls'");
+			echo $output;
+
+			//header('location:settings.php');
+	}
+
 ?>

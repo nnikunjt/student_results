@@ -121,21 +121,21 @@
                         </thead>
                         <tbody>
                             <tr>";
-                            if ($select_row['math_total'] != 0 && $select_row['math_obtain']) {
+                            if ($select_row['math_total'] != 0 ) {
                                 echo "<td>Math</td>";
                                 echo "<td>".$select_row['math_total']."</td>";
                                 echo "<td>".$select_row['math_obtain']."</td>";
                             }
                             echo "</tr>
                                     <tr>";
-                            if ($select_row['sci_total'] != 0 && $select_row['sci_obtain']) {
+                            if ($select_row['sci_total'] != 0) {
                                 echo "<td>Science</td>";
                                 echo "<td>".$select_row['sci_total']."</td>";
                                 echo "<td>".$select_row['sci_obtain']."</td>";
                             }
                             echo "</tr>
                                     <tr>";
-                                    if ($select_row['sst_total'] != 0 && $select_row['sst_obtain']) {
+                                    if ($select_row['sst_total'] != 0) {
                                         echo "<td>Social Science</td>";
                                         echo "<td>".$select_row['sst_total']."</td>";
                                         echo "<td>".$select_row['sst_obtain']."</td>";
@@ -147,7 +147,16 @@
                     echo "<div class='row'>
                     <label class='col-sm-2 col-form-label'>Percentage :</label>
                     <div class='col-sm-4'>";
-                        echo $select_row['percentage'];
+                        echo "<b>".$select_row['percentage']." %</b>";
+                        if ($select_row['percentage']<35) {
+                          echo "<br><br><label style='color: red ;'>Need Improvment</label> ";
+                        }
+                        elseif ($select_row['percentage']<80) {
+                          echo "<br><br><label style='color:  #ff8000 ;'>Better luck next time</label> ";
+                        }
+                        else{
+                          echo "<br><br><label style='color: green ;'>Weldone</label> ";
+                        }
                     echo "</div>
                         </div>";
 
@@ -165,7 +174,12 @@
 
 
 }
+<<<<<<< HEAD
 
+=======
+?>
+<label style="color: red ;"></label>
+>>>>>>> 46eb34db41a3c12342e64ac91758e5c25d2b6eee
 
 
 
