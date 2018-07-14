@@ -67,8 +67,10 @@
 <?php
   
     // showing results
-    if (isset($_GET['roll_no'])) {
-        $roll_no = $_GET['roll_no'];
+		if(isset($_GET['roll_no'])){
+        $roll_no = $_GET['roll_no'];//here i want roll no.
+		}
+        echo $roll_no;
 
         $select_query = "SELECT * FROM students INNER JOIN results ON students.roll_no = results.roll_no WHERE students.roll_no = $roll_no AND results.test_date = (SELECT MAX(test_date) FROM results WHERE roll_no = $roll_no)";
         $select_run = mysqli_query($conn, $select_query);
@@ -143,27 +145,19 @@
 <br><br><br><br><br><br><br>
 
 
- <footer class="footer">
- <div class="container-fluid paddind">
-    <div class="row ">
+ <footer class='footer'>
+ <div class='container-fluid paddind'>
+    <div class='row '>
         
-        <div class="col-md-4">          
-           <p class="text-muted" >B-4, Chitrakoot Society - 2, Opp. Tulsidham Market, Zadeshwar Road, Bharuch.<br>
+        <div class='col-md-4'>          
+           <p class='text-muted' >B-4, Chitrakoot Society - 2, Opp. Tulsidham Market, Zadeshwar Road, Bharuch.<br>
              Dipesh sir Mo. 96381 92399 </p>
            
         </div>
         
 </footer>
 
-"
-
-;
-
-
-
-}
-
-
+";
 
 
 ?>
@@ -201,7 +195,10 @@ pdf.fromHTML(
       // dispose: object with X, Y of the last line add to the PDF
       //          this allow the insertion of new lines after html
         pdf.save('<?php echo $pdfname; ?>.pdf');
+        window.history.back();
       }
-  )     
+  )   
+
+
 }
 </script>
