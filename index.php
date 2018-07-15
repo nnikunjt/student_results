@@ -29,9 +29,10 @@
             font-size: 2rem;
             color: #34AF23;
         }
-  </style>
-
-
+ .downloadbutton{
+    margin-top: .7rem;
+}
+</style>
     <title>Home</title>
   </head>
   <body>
@@ -177,8 +178,8 @@
 
         echo "</div>
             </div>
-            <div align='right'>
-                <a href='test.php?roll_no=$_GET[roll_no]' class='btn btn-outline-primary'>Download As PDF</a>
+            <div align='center'>
+                <a href='test.php?roll_no=$_GET[roll_no]' class=' downloadbutton btn btn-outline-primary' >Download As PDF</a>
 
             </div>
         </div>
@@ -196,6 +197,7 @@
 ?>
 
 
+</style>
  <footer class="footer">
  <div class="container-fluid paddind">
     <div class="row ">
@@ -203,21 +205,16 @@
         <div class="col-md-4">          
            <p class="text-muted" >B-4, Chitrakoot Society - 2, Opp. Tulsidham Market, Zadeshwar Road, Bharuch.<br>
              Dipesh sir Mo. 96381 92399 </p>
+           
         </div>
         <div class="col-md-8" align="right">
             <p> Develop by
             <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
                   <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a></p>
-
-
         </div>      
-
 </footer>
 
 </body>
 </html>
 
- 
-
-    
 
