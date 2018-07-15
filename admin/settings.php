@@ -238,7 +238,7 @@ SESSION_START();
 
 
 
-   <footer class="page-footer font-small unique-color-dark pt-4">
+    <footer class="page-footer font-small unique-color-dark pt-4">
     <div class="footer  py-3">
 
             <div align="left">
@@ -251,7 +251,7 @@ SESSION_START();
             </div>
         </div>
 
-  </footer>
+  </footer> 
 
 
 </body>

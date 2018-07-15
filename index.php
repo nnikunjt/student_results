@@ -86,6 +86,9 @@
                     <div class='card'>
                         <div class='card-header' >
                         Result
+                        <div align='right'>
+                            <a href='https://api.whatsapp.com/send?phone=whatsappphonenumber&text="; echo 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; echo "'>Share</a>
+                        </div>
                     </div>
                     <div class='card-body'>
                     <div class='row'>
