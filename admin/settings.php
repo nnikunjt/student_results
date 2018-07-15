@@ -238,7 +238,7 @@ SESSION_START();
 
 
 
- <footer class="footer">
+<footer class="footer">
  <div class="container-fluid paddind">
     <div class="row ">
         
@@ -253,6 +253,9 @@ SESSION_START();
                   <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a></p>
         </div>      
 </footer>
+
+</body>
+</html>
 
 
 </body>

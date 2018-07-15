@@ -70,7 +70,7 @@
 		if(isset($_GET['roll_no'])){
         $roll_no = $_GET['roll_no'];//here i want roll no.
 		}
-        echo $roll_no;
+        echo $roll_no; 
 
         $select_query = "SELECT * FROM students INNER JOIN results ON students.roll_no = results.roll_no WHERE students.roll_no = $roll_no AND results.test_date = (SELECT MAX(test_date) FROM results WHERE roll_no = $roll_no)";
         $select_run = mysqli_query($conn, $select_query);
@@ -84,19 +84,22 @@
                 <div class='col-md-10'>
                     <div class='card'>
                         <div class='card-header' >
-                    <h2>Yash Classes</h2>
-                      
+                    <h2 class='display-4'>Yash Classes</h2>
+                    \n\n
                     </div>
                     <div class='card-body'>
                     <div class='row'>
-                    <form a ></form>
+                    \n
 
- <p> Name :    " ;       echo $select_row['student_name'];  echo "</p>
- <p> Test Date : " ;echo $select_row['test_date'];echo "   Std :   ";echo $select_row['std'];
-                    echo "</div></p>
-  <p> Medium :  ";echo $select_row['medium'];
+ <p> Name :    " ;       echo $select_row['student_name'];  echo "</p>";
+ echo"<p>Test Date : " .$select_row['test_date']."\n
+      Std : ".$select_row['std']."</p>";
                     echo "
-                    <table class='table'>
+  <p> Medium :  ".$select_row['medium'];
+                    
+
+
+                    echo "<table class='table'>
                         <thead class='thead-light'>
                             <tr>
                                 <th>Subject</th>
@@ -128,10 +131,10 @@
                         echo "                            
                         </tbody>
                     </table>";
-                    echo "<div class='row'>
-                    <label class='col-sm-2 col-form-label'>Percentage :</label>
-                    <div class='col-sm-4'>";
-                        echo $select_row['percentage'];
+     echo "Presantage  : ".$select_row['percentage']." %";
+
+       
+
                     echo "</div>
                         </div>
 
@@ -139,33 +142,28 @@
         </div> 
         </div>
         </div>
-    </div>
+    <footer class='footer2'>
+           <p class='text-muted' >B-4, Chitrakoot Society - 2, Opp. Tulsidham </p>
+           <p> Market, Zadeshwar Road, Bharuch.</p>
+          <p>   Dipesh sir Mo. 96381 92399 </p>
+
+     </footer>     
 </div>
-<br><br><br><br><br><br><br>
-
-
- <footer class='footer'>
- <div class='container-fluid paddind'>
-    <div class='row '>
-        
-        <div class='col-md-4'>          
-           <p class='text-muted' >B-4, Chitrakoot Society - 2, Opp. Tulsidham Market, Zadeshwar Road, Bharuch.<br>
-             Dipesh sir Mo. 96381 92399 </p>
-           
-        </div>
-        
-</footer>
 
 ";
 
 
 ?>
+
+
+<div></div>	
 </body>
 </html>
 
 
 <script type="text/javascript">
-	window.onload = function() {
+	window.onload = function() 
+{
   HTMLtoPDF();
 };
     
