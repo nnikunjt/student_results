@@ -25,6 +25,10 @@
         .col-sm-4{
             padding-top: .4rem;
         }
+        .f{
+            font-size: 2rem;
+            color: #34AF23;
+        }
   </style>
 
 
@@ -85,10 +89,18 @@
                 <div class='col-md-10'>
                     <div class='card'>
                         <div class='card-header' >
-                        Result
-                        <div align='right'>
-                            <a href='https://api.whatsapp.com/send?phone=whatsappphonenumber&text="; echo 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; echo "'>Share</a>
+                        <div class='row'>
+                            <div class='col-sm-4'>
+                                 Result
+                            </div>
+                            <div class='col-sm-4'></div>
+                             <div class='col-sm-4' align='right'>
+                             <a href='https://api.whatsapp.com/send?phone=whatsappphonenumber&text="; echo 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; echo "'><i class='f fab fa-whatsapp'></i></a>
+                            </div>
+
                         </div>
+                       
+                       
                     </div>
                     <div class='card-body'>
                     <div class='row'>
@@ -203,3 +215,8 @@
 </body>
 </html>
 
+
+
+    
+
+<i class='fab fa-whatsapp'></i>
