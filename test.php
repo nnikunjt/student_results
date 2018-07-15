@@ -105,28 +105,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>";
+                            ";
                             if ($select_row['math_total'] != 0 && $select_row['math_obtain']) {
-                                echo "<td>Math</td>";
+                                echo "<tr>
+                                      <td>Math</td>";
                                 echo "<td>".$select_row['math_total']."</td>";
-                                echo "<td>".$select_row['math_obtain']."</td>";
+                                echo "<td>".$select_row['math_obtain']."</td> </tr>";
                             }
-                            echo "</tr>
-                                    <tr>";
+                            
                             if ($select_row['sci_total'] != 0 && $select_row['sci_obtain']) {
-                                echo "<td>Science</td>";
+                                echo "<tr>
+                                         <td>Science</td>";
                                 echo "<td>".$select_row['sci_total']."</td>";
-                                echo "<td>".$select_row['sci_obtain']."</td>";
+                                echo "<td>".$select_row['sci_obtain']."</td> </tr>";
                             }
-                            echo "</tr>
-                                    <tr>";
+                           
                                     if ($select_row['sst_total'] != 0 && $select_row['sst_obtain']) {
-                                        echo "<td>Social Science</td>";
+                                        echo "<tr><td>Social Science</td>";
                                         echo "<td>".$select_row['sst_total']."</td>";
-                                        echo "<td>".$select_row['sst_obtain']."</td>";
+                                        echo "<td>".$select_row['sst_obtain']."</td> </tr>";
                                     }
-                        echo "</tr>
-                            </tr>
+                        echo "                            
                         </tbody>
                     </table>";
                     echo "<div class='row'>

@@ -79,7 +79,7 @@
 
         $pdfname= $roll_no."_".$select_row['test_date'];
 
-    echo "<div id='HTMLtoPDF'>
+    echo "
           <div class='container'>
             <div class='row'>
                 <div class='col-md-10'>
@@ -163,7 +163,7 @@
         echo "</div>
             </div>
             <div align='right'>
-                <a href='#' onclick='HTMLtoPDF()' class='btn btn-outline-primary'>Download As PDF</a>
+                <a href='test.php?roll_no=$_GET[roll_no]' class='btn btn-outline-primary'>Download As PDF</a>
 
             </div>
         </div>
