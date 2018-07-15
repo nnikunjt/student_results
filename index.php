@@ -216,7 +216,3 @@
 </html>
 
 
-
-    
-
-<i class='fab fa-whatsapp'></i>
