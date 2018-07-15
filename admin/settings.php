@@ -248,7 +248,7 @@ SESSION_START();
            
         </div>
         <div class="col-md-8" align="right">
-            <p> Develop by
+            <p> Developed by
             <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
                   <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a></p>
         </div>      

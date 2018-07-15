@@ -73,7 +73,7 @@ SESSION_START();
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="../css/style.css" rel="stylesheet">
+	<link href="..\css\style.css" rel="stylesheet">
 	<style media="screen">
 		.container{
 			padding-top: 1rem;
@@ -169,7 +169,7 @@ SESSION_START();
 											   <input type="text" name="ss_to" class="form-control" value="">
 										   </div>
 									   </div>
-									   <center><input type="submit" name="submit" value="Add" class="btn btn-outline-primary btn-lg">
+									   <center><input type="submit" name="submit" value="Add Result" class="btn btn-outline-primary btn-lg">
 									   </center>
 								</form>
 							   </div>
@@ -184,22 +184,23 @@ SESSION_START();
 
 
 
-
+<br><br><br><br><br>
 <!-- Footer -->
-   <footer class="page-footer font-small unique-color-dark pt-4">
-    <div class="footer  py-3">
-     <div class="row">
-                 <div class="col-sm-9">
-             <span class="text-muted" >B-4, Chitrakoot Society - 2, Zadeshwar Road,Bharuch. </span>
-            </div>
-   
-       <div class="col-sm-3" align="right"> Develop by
-                   <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
-                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a>
-            </div>
-       </div>
-    </div>
-  </footer>
+<footer class="footer">
+ <div class="container-fluid paddind">
+    <div class="row ">
+        
+        <div class="col-md-4">          
+           <p class="text-muted" >B-4, Chitrakoot Society - 2, Opp. Tulsidham Market, Zadeshwar Road, Bharuch.<br>
+             Dipesh sir Mo. 96381 92399 </p>
+           
+        </div>
+        <div class="col-md-8" align="right">
+            <p> Developed by
+            <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
+                  <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a></p>
+        </div>      
+</footer>
 
 
 

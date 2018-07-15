@@ -18,7 +18,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css\style.css" rel="stylesheet">
   <script src="js/jspdf.js"></script>
   <script src="js/jquery-2.1.3.js"></script>
   <style media="screen">
@@ -208,7 +208,7 @@
            
         </div>
         <div class="col-md-8" align="right">
-            <p> Develop by
+            <p> Developed by
             <a href="https://plus.google.com/103929880037258813858" target="_blank">Nikunj,</a>
                   <a href="https://plus.google.com/100510913946087775138" target="_blank"> Kishan</a></p>
         </div>      
