@@ -11,7 +11,6 @@
 		$output .= '
 			<table class="table" border="1">
 				<tr>
-					<th>Id</th>
 					<th>roll_no</th>
 					<th>student_name</th>
 					<th>std</th>
@@ -27,7 +26,6 @@
 			while ($res = mysqli_fetch_array($select_run)){
 				$output .='
 					<tr>
-						<td>'.$res['id'].'</td>
 						<td>'.$res['roll_no'].'</td>
 						<td>'.$res['student_name'].'</td>
 						<td>'.$res['std'].'</td>
