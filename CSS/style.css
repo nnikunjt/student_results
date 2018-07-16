@@ -33,14 +33,9 @@
 .footer{
  	background-color: #F5FFFA;
  	color: #808080;
- 	position: fixed;
-   	margin-bottom: .3rem;
-   
-   	flex: 0 0 auto;
- 	bottom:0px;
-
-	height: 100px;
-	width: 100%;
+   	position: absolute;
+    left: 0;
+    bottom: 0;
  	padding-top: 2rem;
 
  }
