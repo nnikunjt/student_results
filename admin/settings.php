@@ -141,8 +141,9 @@ SESSION_START();
                                         <input type="submit" name="backup_students" value="Backup students Table" class="btn btn-primary"><pre>    </pre>
                                         <input type="submit" name="backup_results" value="Backup results Table" class="btn btn-primary"><pre>    </pre>
                                 <!--        <input type="submit" name="resetok" value="Reset tables" class="btn btn-primary"><pre>    </pre> -->
-                                        <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables</button>
+                                        <button type="button" class="btn btn-primary"  name="resettable" data-toggle="modal" data-target="#exampleModal">Reset tables</button><pre>    </pre>
 
+                                        <button type="button" class="btn btn-primary"  name="import" data-toggle="modal" data-target="#import">Import</button>
                                     </div>
 
                                 <!--    <input type="submit" class="btn btn-outline-primary btn-lg" name="submit" value="Apply"> -->
@@ -207,6 +208,7 @@ SESSION_START();
         </div>
         </div>
 
+<!-- Model for Reset-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -237,6 +239,36 @@ SESSION_START();
     </div>
   </div>
 </div>
+
+
+<!--Model for import ecxel to Mysql-->
+<div class="modal fade" id="import" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Import excel to mysql table</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <form enctype="multipart/form-data" action="excel_to_mysql.php" method="post" role="form">
+                <div class="form-group">
+                <label for="exampleInputFile">File Upload</label>
+                <input type="file" name="file" id="file" size="150">
+               
+                <button type="submit" class="btn btn-outline-primary" name="import" value="import">Import</button>
+                 </div>
+                </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 

@@ -17,6 +17,7 @@
 					<th>std</th>
 					<th>medium</th>
 					<th>birthdate</th>
+					<th>school</th>
 					<th>father_name</th>
 					<th>father_no</th>
 					<th>mother_name</th>
@@ -32,6 +33,7 @@
 						<td>'.$res['std'].'</td>
 						<td>'.$res['medium'].'</td>
 						<td>'.$res['birthdate'].'</td>
+						<td>'.$res['school'].'</td>
 						<td>'.$res['father_name'].'</td>
 						<td>'.$res['father_no'].'</td>
 						<td>'.$res['mother_name'].'</td>
