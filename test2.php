@@ -12,12 +12,14 @@
   <head>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="jquery/jquery.min.js"></script>  
+  <script src="jquery/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">   
+  </script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/all.js"></script>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="cssstyle.css" rel="stylesheet">
   <script src="js/jspdf.js"></script>
   <script src="js/jquery-2.1.3.js"></script>
   <style media="screen">
