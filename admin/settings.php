@@ -219,9 +219,10 @@ SESSION_START();
         </button>
       </div>
       <div class="modal-body">
-        
-        You have to make bachup Before resetting you tables.
+        First, Do this you have to Make your backup. If you Don't have made back up, make it.
         <br>
+        If you click ok' then you lose all saved data from your tables<br>
+        result, students<br>
 
         Did you really want to do that?<br>
 
