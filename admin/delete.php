@@ -29,4 +29,27 @@
         }
     }
 
+
+$backup_students = mysqli_query( $conn, "SHOW TABLES LIKE '%backup_students_%' ");
+$backup_results = mysqli_query( $conn, "SHOW TABLES LIKE '%backup_results_%' ");
+        
+    if(isset($_GET['student_drop'])){
+
+      SELECT CONCAT( 'DROP TABLE ', GROUP_CONCAT(table_name) , ';' ) 
+    AS statement FROM information_schema.tables 
+    WHERE  table_schema = 'student_results' AND table_name LIKE 'backup_students_%';
+
+
+      if ($conn->query($drop) === TRUE) {
+           // header('location:settings.php');
+            echo "done";
+        }
+        else {
+            echo "string";
+        }      
+
+    }
+
+   
+
 ?>
