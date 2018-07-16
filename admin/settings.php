@@ -93,6 +93,9 @@ SESSION_START();
             h1{
                 margin-top: 1rem;
             }
+            .drop{
+                a
+            }
         </style>
     </head>
     <body>
@@ -152,7 +155,13 @@ SESSION_START();
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <h3>Students backup tables</h3>
+                                    <div class="row">
+                                        <h3>Students backup tables</h3>
+                                        <div class="col-sm-2  offset-sm-2">
+                                         <a href='delete.php?student_drop=backup_students' class='btn btn-danger'>X</a>
+                                        </div>
+                                    </div>
+                                    
                                     <div class="table-responsive">
                                         <table class="table table-striped">
                                             <thead>
