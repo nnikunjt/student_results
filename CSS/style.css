@@ -33,9 +33,11 @@
 .footer{
  	background-color: #F5FFFA;
  	color: #808080;
-   	position: absolute;
+   	
+   	position: fixed;
     left: 0;
     bottom: 0;
+    width: 100%;
  	padding-top: 2rem;
 
  }
