@@ -84,13 +84,12 @@ SESSION_START();
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Admin</title>
             
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <script src="../jquery/jquery.min.js"></script>  
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/all.js"></script>
-        <link href="../css/style.css" rel="stylesheet">
-  <script src="../js/jspdf.js"></script>
-  <script src="../js/jquery-2.1.3.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
 
         <style type="text/css">
             h1{
@@ -261,12 +260,12 @@ SESSION_START();
         </button>
       </div>
       <div class="modal-body">
-            <form enctype="multipart/form-data" action="excel_to_mysql.php" method="post" role="form">
+            <form enctype="multipart/form-data" method="post" role="form" id="export_excel">
                 <div class="form-group">
                 <label for="exampleInputFile">File Upload</label>
-                <input type="file" name="file" id="file" size="150">
+                <input type="file" name="excel_file" id="excel_file">
                
-                <button type="submit" class="btn btn-outline-primary" name="import" value="import">Import</button>
+               <!-- <button type="submit" class="btn btn-outline-primary" name="import" value="import">Import</button>-->
                  </div>
                 </form>
       </div>
@@ -304,3 +303,25 @@ SESSION_START();
 
 </body>
 </html>
+
+
+<script>
+    $(document).ready(function() {
+       $('#excel_file').change(function(){
+            $('#export_excel').submit();
+       }); 
+       $('#export_excel').on('submit',function(event){
+            event.preventDefault();
+            $.ajax({
+                url:"excel_to_mysql.php",
+                method:"POST",
+                data:new FormData(this),
+                contentType :false,
+                processData:false,
+                success :function(data){
+                    $('#excel_file').val('');
+                }
+            });
+       });
+    });
+</script>
