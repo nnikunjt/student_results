@@ -95,7 +95,7 @@
                             </div>
                             <div class='col-sm-4'></div>
                              <div class='col-sm-4' align='right'>
-                             <a href='https://api.whatsapp.com/send?phone=whatsappphonenumber&text="; echo 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; echo "'><i class='f fab fa-whatsapp'></i></a>
+                             <a href='https://api.whatsapp.com/send?phone=whatsappphonenumber&text="; echo 'http://' . $_SERVER['HTTP_HOST'] ."/student_results/your_student_result.php?".$roll_no; echo "'><i class='f fab fa-whatsapp'></i></a>
                             </div>
 
                         </div>

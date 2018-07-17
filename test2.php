@@ -19,7 +19,7 @@
   </script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/all.js"></script>
-  <link href="cssstyle.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <script src="js/jspdf.js"></script>
   <script src="js/jquery-2.1.3.js"></script>
   <style media="screen">
@@ -54,7 +54,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">
-                    <form class="" action="index.php" method="get">
+                    <form class="" action="test2.php" method="get">
                         <div class="form-group row" style="padding: .3rem;">
                             <label for="roll_no" class="col-sm-1 col-form-label">Roll no.</label>
                             <div class="col-sm-2">
@@ -84,7 +84,8 @@
         $select_row = mysqli_fetch_array($select_run);
 
         $pdfname= $roll_no."_".$select_row['test_date'];
-
+       $the_sitename= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+      $the_sitename= substr(  $_SERVER['REQUEST_URI'] , 0, -7 );
     echo "
           <div class='container'>
             <div class='row'>
@@ -97,7 +98,8 @@
                             </div>
                             <div class='col-sm-4'></div>
                              <div class='col-sm-4' align='right'>
-                             <a href='https://api.whatsapp.com/send?phone=whatsappphonenumber&text="; echo 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; echo "'><i class='f fab fa-whatsapp'></i></a>
+                             
+                           <a href='https://api.whatsapp.com/send?phone=whatsappphonenumber&text="; echo 'http://' . $_SERVER['HTTP_HOST'] ."/student_results/your_student_result.php?".$roll_no; echo "'><i class='f fab fa-whatsapp'></i></a>
                             </div>
 
                         </div>
