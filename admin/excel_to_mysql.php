@@ -1,49 +1,41 @@
 <?php
 
-require_once('../database/connection.php');
+	require '../PHPExcel/IOFactory.php'; 
+	require_once('../database/connection.php');
 
-if(!empty($_FILES["excel_file"])){
+	if (isset($_POST['upload'])) {
+		$inputfilename =$_FILES['file']['tmp_name'];
+	$exceldata=array();
 
-	$file_array =explode(".",$_FILES["excel_file"]["name"]);
+	try {
+		$inputfiletype =PHPExcel_IOFactory::identify($inputfilename);
+		$objReader = PHPExcel_IOFactory::createReader($inputfilename);
+		$objPHPExcel =$objReader->load($inputfilename);
 
-	if ($file_array[1] == 'xls') {
-		include("../PHPExcel/IOFactory.php");
+	} catch (Exception $e) {
+		dia('Error loading file"'.pathinfo($inputfilename,PATHINFO_BASENAME).'":'.$e->getMessage());
 
-	$object =PHPExcel_IOFactory::load($_FILES["excel_file"]["tmp_name"]);
-	foreach ($object->getWorksheetIterator() as $worksheet) {
-		$highestRow = $worksheet -> getHighestRow();
+	}
+	$sheet = $objPHPExcel->getSheet(0);
+	$highestRow =$sheet->getHighestRow();
+	$highestColumn =$sheet->getHighestColumn();
 
-		for ($row=2; $row <=$highestRow ; $row++) { 
-			$roll_no =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(1,$row)->getValue());
-			$student_name =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(2,$row)->getValue());
-			$std =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(3,$row)->getValue());
-			$medium =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(4,$row)->getValue());
-			$birthdate =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(5,$row)->getValue());
-			$school =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(6,$row)->getValue());
-			$father_name =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(7,$row)->getValue());
-			$father_no =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(8,$row)->getValue());
-			$mother_name =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(9,$row)->getValue());
-			$mother_no =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(10,$row)->getValue());
-			$address =mysqli_real_escape_string($conn, $worksheet->getCellByColumnAndRow(11,$row)->getValue());
+	for ($row=1; $row <=$highestRow ; $row++) { 
+		$rowData = $sheet->rangeToArray('A'.$row.':'.$highestColumn.$row,NULL,TRUE,FALSE);
 
+		$insert_query ="INSERT INTO students(roll_no,student_name,std,medium,birthdate,school,father_name,father_no,mother_name,mother_no,address
+		) VALUES('".$rowData[0][0]."','".$rowData[0][1]."','".$rowData[0][2]."','".$rowData[0][3]."','".$rowData[0][4]."','".$rowData[0][5]."','".$rowData[0][6]."','".$rowData[0][7]."','".$rowData[0][8]."','".$rowData[0][9]."','".$rowData[0][10]."')";
 
-			$insert_query ="INSERT INTO students(roll_no,student_name,std,medium,birthdate,school,father_name,father_no,mother_name,mother_no,address
-				) VALUES('$roll_no','$student_name','$std','$medium','$birthdate','$school','$f_name','$father_no','$m_name','$mother_no','$address')";
-
-			if ($conn->query($insert_query) === TRUE) {
-				echo "Done";
-			}
-			else{
-				echo "string";
-			}
+		if (mysqli_query($conn,$insert_query)) {
+			$exceldata[]=$rowData[0];
+		}
+		else{
+			echo "Error";
 		}
 	}
+
 	}
-	else{
-		echo "invalid";
-	}
+
 
 	
-
-}
-?>
+ ?>

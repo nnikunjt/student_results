@@ -260,12 +260,13 @@ SESSION_START();
         </button>
       </div>
       <div class="modal-body">
-            <form enctype="multipart/form-data" method="post" role="form" id="export_excel">
+            <form enctype="multipart/form-data" action="excel_to_mysql.php" method="post" role="form" id="export_excel">
                 <div class="form-group">
                 <label for="exampleInputFile">File Upload</label>
-                <input type="file" name="excel_file" id="excel_file">
+                <input type="file" name="file" id="excel_file">
+
                
-               <!-- <button type="submit" class="btn btn-outline-primary" name="import" value="import">Import</button>-->
+                <button type="submit" class="btn btn-outline-primary" name="upload">Import</button>
                  </div>
                 </form>
       </div>
@@ -305,7 +306,7 @@ SESSION_START();
 </html>
 
 
-<script>
+<!--<script>
     $(document).ready(function() {
        $('#excel_file').change(function(){
             $('#export_excel').submit();
@@ -324,4 +325,4 @@ SESSION_START();
             });
        });
     });
-</script>
+</script>-->
